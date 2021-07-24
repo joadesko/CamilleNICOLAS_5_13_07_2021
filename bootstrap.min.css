@@ -130,6 +130,14 @@ button:focus{
 /*Card*/
 
 /*Product*/
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
 .product-form{
     display: flex;
     flex-direction: column;
@@ -142,13 +150,9 @@ button:focus{
     flex-direction: column;
 }
 
-#add-cart{
-    border-radius: 10px;
-    background: rgb(218, 151, 50);
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    width: 12%;
+.button-add-cart{
+    display: flex;
+    justify-content: center;
 }
 /*Product*/
 
