@@ -81,34 +81,77 @@
 /*Card*/
 .jumbotron{
     padding-top: 20px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 0;
 }
 
 .row-jumbotron{
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
 .h1{
     text-align: center;
+    text-decoration: underline;
 }
 
 .cards{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
 }
 
 .card{
-    cursor: pointer;
-    margin: 20px;
+    width: 40em;
+    margin-top: 20px;
+}
+
+.card-body{
+    display: flex;
+    padding: 0.5rem;
+}
+
+.description{
+    width: 50%;
+    padding-left: 50px;
+}
+
+.price{
+    margin: 0;
+}
+
+.link-product{
+    color: rgb(156, 29, 118);
 }
 /*Card*/
+
+/*Product*/
+.product-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.form-description{
+    display: flex;
+    flex-direction: column;
+}
 
 /*Footer*/
 .bg-dark{
     display: flex;
     justify-content: center;
 }
+
+.nav-link-footer{
+    color: rgb(218, 151, 50);
+    padding-left: 5px;
+    padding-right: 50px;
+}
+
+.nav-link-footer:hover{
+    color: #fff;
+    text-decoration: none;
+}
+/*Footer*/
