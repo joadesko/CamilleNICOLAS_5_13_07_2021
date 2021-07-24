@@ -138,6 +138,58 @@
     flex-direction: column;
 }
 
+#add-cart{
+    border-radius: 10px;
+    background: rgb(218, 151, 50);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 12%;
+}
+/*Product*/
+
+/*Formulaire*/
+.form-order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formTitle{
+    text-decoration: underline;
+}
+
+.input-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#input{
+    width: 15em;
+    margin-bottom: 20px; 
+}
+
+#input-address{
+    width: 30.38em; 
+    margin-bottom: 20px; 
+}
+
+#input-commentary{
+    width: 30.38em;
+}
+
+#validOrder{
+    border-radius: 10px;
+    background: rgb(218, 151, 50);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 15%;
+}
+
 /*Footer*/
 .bg-dark{
     display: flex;
