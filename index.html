@@ -43,39 +43,39 @@
                             <!--Barre de rechercher-->
                             <div class="search-bar">
                                 <button class="button-search-bar"><i class="fas fa-search icone-search-bar"></i></button>
-                                <input type="search" placeholder="Rechercher les produits" class="input-search-bar">
+                                    <input type="search" placeholder="Rechercher les produits" class="input-search-bar">
                             </div>
 
                             <!--Menu de navigation-->
-                            <nav class="navbar navbar-expand">
+                            <nav class="col navbar navbar-expand">
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                                     <span class="navbar-toggle-icon"></span>
                                 </button>
                                     <div class="navbarContent" class="collapse navbar-collapse">
-                                        <ul class="list-unstyled">
-                                            <li class="nave-item-active">
+                                        <ul class="navbar-nav">
+                                            <li class="col-4 nave-item-active">
                                                 <a class="nav-link font-weight-bold" href="index.html">Accueil</a>
                                             </li>
-                                            <li class="nave-item">
+                                            <li class="col-4 nave-item">
                                                 <i class="far fa-user navbar-icone"></i>
                                                 <a class="nav-link font-weight-bold" href="#">Profil</a>
                                             </li>
-                                            <li class="nave-item">
+                                            <li class="col-4 nave-item">
                                                 <i class="far fa-bell navbar-icone"></i>
                                                 <a class="nav-link font-weight-bold" href="#">Mes notifications</a>
                                             </li>
-                                            <li class="nave-item">
+                                            <li class="col-4 nave-item">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-camera-fill navbar-icone" viewBox="0 0 16 16">
                                                     <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                                     <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
                                                 </svg>
                                                 <a class="nav-link font-weight-bold" href="#">Mes commandes</a>
                                             </li>    
-                                            <li class="nave-item">
+                                            <li class=" col-4 nave-item">
                                                 <img src="logo/icone_onglet.png" width="20" height="20">
                                                 <a class="nav-link font-weight-bold" href="shopping_card.html">Panier</a>
+                                                <span class="l-counter" style="display:none;"></span>
                                             </li>
-
                                         </ul>
                                     </div>
                             </nav>     
@@ -84,7 +84,7 @@
                 </div>
             </header>
 
-                <main>
+                <main class="l-main l-center">
                     <section class="jumbotron">
                         <div class="row-jumbotron">
                             <h1 class="h1">Caméras Vintages</h1>
