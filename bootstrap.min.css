@@ -177,20 +177,39 @@ button:focus{
 
 #input{
     width: 15em;
+    height: 40px;
+    font-size: 18px;
     margin-bottom: 20px; 
+    border: none;  
+    border-radius: 5px;
 }
 
 #input-address{
-    width: 30.38em; 
-    margin-bottom: 20px; 
+    width: 30.38em;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-top: solid 1px;
+    border: none;
+    border-radius: 5px;
 }
 
 #input-tel{
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    height: 40px; 
+    font-size: 18px;
+    border-top: solid 1px;
+    border: none;
+    border-radius: 5px;
 }
 
 #input-commentary{
     width: 30.38em;
+    height: 40px;
+    font-size: 18px;
+    border-top: solid 1px;
+    border: none;
+    border-radius: 5px;
 }
 
 .button-valid{
@@ -203,6 +222,11 @@ button:focus{
     justify-content: center;
     align-items: center;
 }
+
+.visa-logo{
+    margin-right: 10px;
+}
+
 
 #button{
     border-radius: 10px;
@@ -223,7 +247,7 @@ button:focus{
 }
 
 .order-fraiming{
-    padding: 50px;
+    padding-top: 50px;
 }
 
 .thanksTitle{
