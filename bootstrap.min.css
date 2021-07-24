@@ -31,8 +31,12 @@
     background-color: transparent;
 }
 
-.button-search-bar:active{
-    text-decoration: none;
+input:focus{
+    outline: none;
+}
+
+button:focus{
+    outline: none;
 }
 
 .input-search-bar{
@@ -177,17 +181,86 @@
     margin-bottom: 20px; 
 }
 
+#input-tel{
+    margin-bottom: 20px; 
+}
+
 #input-commentary{
     width: 30.38em;
 }
 
-#validOrder{
+.button-valid{
+    display: flex;
+    justify-content: center;
+}
+
+.payement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button{
     border-radius: 10px;
+    border: none;
     background: rgb(218, 151, 50);
     color: #fff;
     font-size: 20px;
     font-weight: bold;
     width: 15%;
+}
+/*Formulaire*/
+
+/*Order*/
+.gif-order{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.order-fraiming{
+    padding: 50px;
+}
+
+.thanksTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+.valide{
+    font-size: 3em;
+}
+
+.buttonOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-order-home{
+    border-radius: 10px;
+    border: none;
+    background: rgb(218, 151, 50);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 17%;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#button-order{
+    border-radius: 10px;
+    border: none;
+    background: rgb(218, 151, 50);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 13%;
+    padding: 10px;
 }
 
 /*Footer*/

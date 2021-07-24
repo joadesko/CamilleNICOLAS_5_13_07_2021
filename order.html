@@ -27,7 +27,7 @@
         <!--Icone onglet-->
         <link rel="shortcut icon" href="logo/icone_onglet.png">
         
-        <title>Orinoco en ligne</title>
+        <title>Merci de votre commande !</title>
     </head>
     
     <body>
@@ -73,7 +73,7 @@
                                             <a class="nav-link font-weight-bold" href="#">Mes commandes</a>
                                         </li>    
                                         <li class=" col-4 nave-item">
-                                            <img src="logo/icone_onglet.png" width="20" height="20">
+                                            <img src="logo/icone_onglet.png" width="30" height="30">
                                             <a class="nav-link font-weight-bold" href="shopping_card.html">Panier</a>
                                             <span class="l-counter" style="display:none;"></span>
                                         </li>
@@ -87,8 +87,22 @@
 
             <main>
                 <section class="jumbotron">
-                    <div class="row-jumbotron">
+                    <div class="row-jumbotron order-fraiming">
+                        <div class="gif-order">
+                            <img src="gif/camera.gif" width="400" height="300">
+                        </div>
+                        <div class="thanksTitle">
+                            <h3 class="valide">Validé !</h3>
+                            <h4>Merci d'avoir passé commande ! Elle est en cours de préparation. Nous vous contacterons dès son envoie !</h4>
+                            <p>Le prix total de vos achats est de :</p>
+                            <p>Numéros de votre commande :</p>
+                        </div>
 
+                        <!--Bouton-->
+                        <div class="buttonOrder">
+                            <button class="form-button" id="button-order-home" onclick="window.location.href = 'index.html';">Retour à la page d'accueil</button>
+                            <button class="form-button" id="button-order" onclick="window.location.href = '#';">Autres commandes</button>
+                        </div>
                     </div>
                 </section>
             </main>
