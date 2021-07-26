@@ -291,6 +291,7 @@ button:focus{
     align-items: center;
     flex-direction: column;
     margin-top: 48px;
+    text-align: center;
 }
 
 .valide{
@@ -349,3 +350,60 @@ button:focus{
     text-decoration: none;
 }
 /*Footer*/
+
+
+
+
+/**Responsive Laptop 1204px**/
+
+/*index*/
+@media (max-width: 1204px){
+
+    .navbar-expand{
+        margin-top: 20px;
+    }
+}
+
+/*Product*/
+@media (max-width: 1204px){
+
+    .col-fluid {
+        margin-left: 30px;
+        
+    }
+
+    .navbar{
+        padding: 0;
+    }
+
+    .navbar-expand{
+        margin-top: 20px;
+    }
+
+    #button{
+        width: 25%;
+    }
+}
+
+/*Order*/
+@media (max-width: 1204px){
+
+    .jumbotron{
+        padding-top: 48px;
+    }
+
+    .order-fraiming{
+        margin-left: -40px;
+    }
+
+    .thanksTitle{
+        text-align: center;
+    }
+
+    #button-order{
+        width: 32%;
+    }
+}
+
+
+
