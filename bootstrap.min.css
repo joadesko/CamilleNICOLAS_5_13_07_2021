@@ -1,3 +1,7 @@
+*{
+    list-style: none;
+}
+
 /*Header*/
 .container-fluid{
     display: flex;
@@ -365,15 +369,15 @@ h1{
 /**Responsive Laptop 1204px**/
 
 /*index*/
-@media (max-width: 1204px){
+/*@media (max-width: 1204px){
 
     .navbar-expand{
         margin-top: 20px;
     }
-}
+}*/
 
 /*Product*/
-@media (max-width: 1204px){
+/*@media (max-width: 1204px){
 
     .col-fluid {
         margin-left: 30px;
@@ -391,10 +395,10 @@ h1{
     #button{
         width: 25%;
     }
-}
+}*/
 
 /*Order*/
-@media (max-width: 1204px){
+/*@media (max-width: 1204px){
 
     .jumbotron{
         padding-top: 48px;
@@ -411,7 +415,7 @@ h1{
     #button-order{
         width: 32%;
     }
-}
+}*/
 
 
 
