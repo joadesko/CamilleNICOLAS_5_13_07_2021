@@ -13,8 +13,17 @@
 }
 
 .bg-light{
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-brand{
+    margin-left: -100px;
 }
 /*Header*/
 
@@ -88,25 +97,26 @@ button:focus{
     margin-bottom: 0;
 }
 
-.row-jumbotron{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+img{
+    object-fit: cover;
 }
 
-.h1{
+h1{
     text-align: center;
     text-decoration: underline;
+    margin-top: 50px;
 }
 
 .cards{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 72px;
 }
 
 .card{
-    width: 40em;
+    max-width: 320px;
+    margin-right: 20px;
     margin-top: 20px;
     text-transform: uppercase;
     transition: transform 600ms cubic-bezier(0.87, 0, 0.13, 1), background-position 600ms cubic-bezier(0.87, 0, 0.13, 1), box-shadow 500ms linear;
@@ -124,17 +134,15 @@ button:focus{
 }
 
 .card-body{
-    display: flex;
     padding: 0.5rem;
 }
 
-.description{
-    width: 50%;
-    padding-left: 50px;
+.card-title{
+    font-size: 18px;
 }
 
 .text-left{
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .price{
