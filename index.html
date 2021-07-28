@@ -65,7 +65,7 @@
                                         </li>    
                                         <li class=" col-4 col-md-3 nave-item">
                                             <img src="logo/icone_onglet.png" width="30" height="30">
-                                            <a class="nav-link font-weight-bold" href="shopping_card.html">Panier</a>
+                                            <a class="nav-link font-weight-bold" href="panier.html">Panier</a>
                                             <span class="l-counter" style="display:none;"></span>
                                         </li>
                                     </ul>
@@ -76,86 +76,30 @@
             </div>
             </header>
 
+                <!--Main-->
                 <main id="products-container" class="l-main l-center jumbotron" role="main" aria-label="Contenu principale">
-                    <h1 class="h1">Caméras Vintages</h1>
+                    <h1 class="title">Caméras Vintages</h1>
+                    <h2 class="intro">Nos appareils photos en vente :</h2>
+                            <!--Tableau Structure Produit-->
+                            <div class="col card">
+                                <table>
+                                    <thead id="productsList"></thead>
+                                </table>
+                            </div>
 
-                        <!--Cards-->
-                        <div class="cards">
-                            <article class="card" tabindex="0">
-                                <div class="card-body">
-                                    <thead>
-                                        <div>
-                                            <td><img src="JWDP5/images/vcam_1.jpg" class="imageUrl" width="300" height="200" title="Produit 1">
-                                        </di<v>                                    
-                                        <ul class="description-produit-1">
-                                            <td><li><h2 class="nomProduit"></h1></li></td>
-                                            <td><li><p class="description"></p></li></td>
-                                            <td><li><p class="prix font-weight-bold"></p></li></td>
-                                        </ul>
-                                    </thead>
-                                </div>          
-                            </article>
-
-                            <article class="card" tabindex="0">
-                                <div class="card-body">
-                                    <thead>
-                                        <div>
-                                            <td><img src="JWDP5/images/vcam_2.jpg" class="imageUrl" width="300" height="200" title="Produit 1"></td>
-                                        </div>   
-                                        <ul class="description-produit-2">
-                                            <td><li><h2 class="nomProduit"></h1></li></td>
-                                            <td><li><p class="description"></p></li></td>
-                                            <td><li><p class="prix font-weight-bold"></p></li></td>
-                                        </ul>
-                                    </thead>
-                                </div>
-                            </article>
-
-                            <article class="card" tabindex="0">
-                                <div class="card-body">
-                                    <thead>
-                                        <div>
-                                            <td><img src="JWDP5/images/vcam_3.jpg" class="imageUrl" width="300" height="200" title="Produit 1"></td>
-                                        </div>  
-                                        <ul class="description-produit-3">
-                                            <td><li><h2 class="nomProduit"></h1></li></td>
-                                            <td><li><p class="description"></p></li></td>
-                                            <td><li><p class="prix font-weight-bold"></p></li></td>
-                                        </ul>
-                                    </thead> 
-                                </div>
-                            </article>
-
-                            <article class="card" tabindex="0">
-                                <div class="card-body">
-                                    <thead>
-                                        <div>
-                                            <td><img src="JWDP5/images/vcam_4.jpg" class="imageUrl" width="300" height="200" title="Produit 1"></td>
-                                        </div>  
-                                        <ul class="description-produit-4">
-                                            <td><li><h2 class="nomProduit"></h1></li></td>
-                                            <td><li><p class="description"></p></li></td>
-                                            <td><li><p class="prix font-weight-bold"></p></li></td>
-                                        </ul>
-                                    </thead>
-                                </div>
-                            </article>
-
-                            <article class="card" tabindex="0">
-                                <div class="card-body">
-                                    <thead>
-                                        <div>
-                                            <td><img src="JWDP5/images/vcam_5.jpg" class="imageUrl" width="300" height="200" title="Produit 1"></td>
-                                        </div>  
-                                        <ul class="description-produit-5">
-                                            <td><li><h2 class="nomProduit"></h1></li></td>
-                                            <td><li><p class="description"></p></li></td>
-                                            <td><li><p class="prix font-weight-bold"></p></li></td>
-                                        </ul>
-                                    </thead>       
-                                </div>
-                            </article>
-                        </div>
+                            <!-- Product template-->
+                            <template id="product">
+                                <a id="productLink" class="card" href="">
+                                    <div class="img">
+                                        <img id="productImage" width="300" height ="250" src="" alt="">
+                                    </div>
+                                    <div class="description">                                   
+                                        <h2 id="productName" ></h2>
+                                        <p id="productDescription"></p>
+                                        <p id="productPrice"></p>
+                                    </div>
+                                </a>
+                            </template>            
                 </main>
 
                     <!--Footer-->  
@@ -179,13 +123,8 @@
                     </footer>
 
             <!--JS-->
-            <script type="text/javascript"  src="../JWDP5/server.js"></script>   
-            <script type="text/javascript"  src="../JWDP5/app.js"></script>   
-            <script type="text/javascript"  src="JWDP5/controllers/camera.js"></script>   
-            <script type="text/javascript" src="JWDP5/models/Camera.js"></script>   
-            <script type="text/javascript"  src="JWDP5/routes/camera.js"></script>   
-            <script type="text/javascript" src="../JWDP5/package-lock.json"></script>   
-            <script type="text/javascript" src="script.js"></script>       
+            <script type="text/javascript" src="JS/ajax.js"></script> 
+            <script type="text/javascript" src="JS/orinoco.js"></script>       
 
         </body>
 </html>
