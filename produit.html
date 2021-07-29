@@ -10,14 +10,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-        <!--JS-->
-        <link rel="stylesheet" href="/JWDP5/server.js">
-        <link rel="stylesheet" href="/JWDP5/app.js">
-        <link rel="stylesheet" href="/JWDP5/controllers/camera.js">
-        <link rel="stylesheet" href="/JWDP5/models/Camera.js">
-        <link rel="stylesheet" href="/JWDP5/routes/camera.js">
-        <link rel="stylesheet" href="/JWDP5/package-lock.json">
-
         <!--Css-->
         <link rel="stylesheet" href="bootstrap.min.css">
 
@@ -85,34 +77,44 @@
             </header>
 
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
-                    <section class="jumbotron">
+                    <article class="jumbotron">
                         <div class="row-jumbotron product">
-                            <div class="img__product">
-                                <img src="" title="Caméra Vintage" tabindex="0">
-                            </div>
-                            <form class="product-form" role="search" aria-label="Informations produits" tabindex="0">
-                                <h4></h4>
-                                    <div class="form-description">
-                                        <p class="text-right"></p>
-                                        <p class="price"></p>
-                                    </div>
-                                    <div class="choice" role="search" aria-label="Choix du produit">
-                                        <label class="font-weight-bold" tabindex="0">La taille de la lentille :</label>
-                                        <select name="quantity">
-                                            <option value="lenses" id="lenses" tabindex="0">
-                                                
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label class="font-weight-bold" tabindex="0">Quantité :</label>
-                                            <select name="quantity" id="quantity">
-                                                <option value="" tabindex="0">
-                                                
+                                <!--Tableau Structure Produit-->
+                                <div class="col card">
+                                    <table>
+                                        <thead id="productsList"></thead>
+                                    </table>
+                                </div>
+
+                                <!-- Product template-->
+                                <template id="product">
+                                    <a id="productLink" class="card" href="">
+                                        <div class="img">
+                                            <img id="productImage" src="" alt="">
+                                        </div>
+                                        <div class="description">                                   
+                                            <h2 id="productName" ></h2>
+                                            <p id="productDescription"></p>
+                                            <p id="productPrice"></p>
+                                        </div>
+                                        <div class="choice" role="search" aria-label="Choix du produit">
+                                            <label class="font-weight-bold" tabindex="0">Optique :</label>
+                                            <select name="quantity">
+                                                <option value="lenses" id="lenses" tabindex="0">
+                                                    
                                                 </option>
                                             </select>
-                                    </div>
-                            </form>
+                                        </div>
+                                        <div>
+                                            <label class="font-weight-bold" tabindex="0">Quantité :</label>
+                                                <select name="quantity" id="quantity">
+                                                    <option value="" tabindex="0">
+                                                    
+                                                    </option>
+                                                </select>
+                                        </div>
+                                    </a>
+                                </template>            
                         </div>
 
                             <!--Bouton-->
@@ -120,7 +122,7 @@
                                 <button class="form-button" id="button">Ajouter au panier</button>
                             </div>
                             
-                    </section>
+                    </article>
                 </main>
 
                      <!--Footer-->  
@@ -144,14 +146,7 @@
                     </footer>
 
             <!--JS-->
-            <script type="text/javascript"  src="../JWDP5/server.js"></script>   
-            <script type="text/javascript"  src="../JWDP5/app.js"></script>   
-            <script type="text/javascript"  src="JWDP5/controllers/camera.js"></script>   
-            <script type="text/javascript" src="JWDP5/models/Camera.js"></script>   
-            <script type="text/javascript"  src="JWDP5/routes/camera.js"></script>   
-            <script type="text/javascript" src="../JWDP5/package-lock.json"></script>   
-            <script type="text/javascript" src="JS/ajax.js"></script> 
-            <script type="text/javascript" src="JS/orinoco.js"></script>     
+            <script type="stylesheet"  src="/JS/produit.js"></script>   
 
         </body>
 </html>

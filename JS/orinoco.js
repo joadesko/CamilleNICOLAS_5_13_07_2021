@@ -122,7 +122,7 @@
     clone.getElementById('productName').textContent = product.name
     clone.getElementById('productPrice').textContent = `${product.price / 100}.00 €`
     clone.getElementById('productDescription').textContent = product.description
-    clone.getElementById('productLink').href = `/products.html?id=${product._id}`
+    clone.getElementById('productLink').href = `produit.html?id=${product._id}`
   
     // Display template
     document.getElementById('productsList').appendChild(clone)
