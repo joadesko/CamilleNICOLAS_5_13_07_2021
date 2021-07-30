@@ -3,6 +3,9 @@
   hydratePage(products)
 })()
 
+const linkProduct = link.id
+link.id = linkProduct
+
 async function getProducts() {
   return fetch('http://localhost:3000/api/cameras')
     .then((httpBodyResponse) => httpBodyResponse.json())
@@ -35,11 +38,11 @@ function displayProduct(product) {
   const clone = document.importNode(template.content, true)
 
   
-  clone.getElementById('productImage').src = product.imageUrl
-  clone.getElementById('productName').textContent = product.name
-  clone.getElementById('productPrice').textContent = product.price
-  clone.getElementById('productDescription').textContent = product.description
-  clone.getElementById('productLink').href = `produit.html?id=${Camera.id}`
+  clone.getElementById('cardImg').src = product.imageUrl
+  clone.getElementById('cardTitle').textContent = product.name
+  clone.getElementById('cardPrice').textContent = product.price
+  clone.getElementById('cardDescription').textContent = product.description
+  clone.getElementById('btn').href = `product.html?id=${product.id}`
 
   
   document.getElementById('productsList').appendChild(clone)
