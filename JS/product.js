@@ -14,7 +14,7 @@ function getArticle(articleId){
           .then((httpBodyResponse) => httpBodyResponse.json())
           .then((products) => products)
           .catch((error) => {
-            alert("Page introuvable")
+            alert("error")
           })
       }
 }
