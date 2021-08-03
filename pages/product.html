@@ -10,16 +10,8 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-        <!--JS-->
-        <link rel="stylesheet" href="/JWDP5/server.js">
-        <link rel="stylesheet" href="/JWDP5/app.js">
-        <link rel="stylesheet" href="/JWDP5/controllers/camera.js">
-        <link rel="stylesheet" href="/JWDP5/models/Camera.js">
-        <link rel="stylesheet" href="/JWDP5/routes/camera.js">
-        <link rel="stylesheet" href="/JWDP5/package-lock.json">
-
         <!--Css-->
-        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
 
         <!--FontAwesome Icone-->
         <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
@@ -27,17 +19,17 @@
         <!--Icone onglet-->
         <link rel="shortcut icon" href="logo/icone_onglet.png">
         
-        <title>Votre panier</title>
+        <title>Votre appareil photo !</title>
     </head>
         <body>
             <!--Header-->
             <header role="heading" aria-label="En-tête du site">
                 <div class="bg-light" role="banner" aria-label="Banner">
-                    <div class="container-fluid">
-                        <div class="col-fluid row">
+                    <div class="container">
+                        <div class="container-row">
                             <!--Logo-->
-                            <a class="navbar-brand" href="index.html">
-                                <img src="logo/logo.JPG" width="200" height="120" alt="Site du logo">
+                            <a class="navbar-brand" href="../index.html">
+                                <img src="../logo/logo.JPG" width="200" height="120" alt="Site du logo">
                             </a>
     
                             <!--Barre de rechercher-->
@@ -47,14 +39,14 @@
                             </div>
     
                             <!--Menu de navigation-->
-                            <nav class="col navbar navbar-expand">
+                            <div class="col-fluid navbar navbar-expand">
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" role="button" aria-label="Bouton" tabindex="0">
                                     <span class="navbar-toggle-icon"></span>
                                 </button>
                                     <nav class="navbarContent" class="collapse navbar-collapse">
                                         <ul class="navbar-nav">
                                             <li class="col-4 col-md-3 nav-item-active">
-                                                <a class="nav-link font-weight-bold" href="index.html">Accueil</a>
+                                                <a class="nav-link font-weight-bold" href="../index.html">Accueil</a>
                                             </li>
                                             <li class="col-4 col-md-3 nav-item">
                                                 <i class="far fa-user navbar-icone"></i>
@@ -72,65 +64,31 @@
                                                 <a class="nav-link font-weight-bold" href="#">Commande</a>
                                             </li>    
                                             <li class=" col-4 col-md-3 nave-item">
-                                                <img src="logo/icone_onglet.png" width="30" height="30">
-                                                <a class="nav-link font-weight-bold" href="panier.html">Panier</a>
+                                                <img src="../logo/icone_onglet.png" width="30" height="30">
+                                                <a class="nav-link font-weight-bold" href="pages/basket.html">Panier</a>
                                                 <span class="l-counter" style="display:none;"></span>
                                             </li>
                                         </ul>
                                     </nav>
-                            </nav>      
+                                </div>      
                         </div>                  
                     </div>
                 </div>
             </header>
 
+                <!--Main-->
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
-                    <section class="jumbotron">
-                        <div class="cart__left" tabindex="0">
-                            <div>
-                                <div class="card--cart" data-id="">
-                                    <i class="far fa-times-circle"></i>
-                                </div>
+                    <article class="jumbotron">
+                        <div class="row-jumbotron product-info">
+                            <!--Template-->
+                            <div id="cardProduct" class="d-flex flex-row"></div>
+                            
+                            <!--Bouton-->
+                            <div class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
+                                <button class="form-button" id="button"><a href="basket.html" alt="Panier de commande">Ajouter au panier</a></button>
                             </div>
-                        </div>
-                        <span class="cart-total"></span>
-
-                        <!--Formulaire-->
-                        <form name="orderForm" class="form-order" role="search" aria-label="Formulaire">
-                            <h4 class="formTitle">Informations pour la commande :</h4>
-                                <div class="input-form">
-                                    <div class="name">
-                                        <input type="text" name="Nom" id="input" placeholder="Nom" aria-labelledby="Nom">
-                                        <input type="text" name="Prénom" id="input" placeholder="Prénom" aria-labelledby="Prénom">
-                                    </div>
-                                    <div class="address">
-                                        <input type="text" name="Adresse" id="input-address" placeholder="Adresse" aria-labelledby="Adresse">
-                                    </div>
-                                    <div class="cp">
-                                        <input type="text" name="CP" id="input" placeholder="Code Postale" aria-labelledby="Code Postale">
-                                        <input type="text" name="Ville" id="input" placeholder="Ville" aria-labelledby="Ville">
-                                    </div>
-                                    <div class="tel">
-                                        <input type="tel" name="Téléphone" id="input-tel" placeholder="Téléphone" aria-labelledby="Téléphone">
-                                    </div>
-                                    <div class="commentary">
-                                        <textarea type="text" name="Commentaire" id="input-commentary" placeholder="Informations complémentaires" aria-labelledby="Informations complementaires"></textarea>
-                                    </div>
-                                </div>
-                        </form>
-                                <!--Bouton-->
-                                <div class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
-                                    <button class="form-button" id="button"><a href="confirmation.html" alt="Panier de commande">Ajouter au panier</a></button>
-                                </div>
-
-                                <!--Paiement-->
-                                <div class="payement">
-                                    <img src="logo/visa.png" width="70" height="70" class="visa-logo">
-                                    <img src="logo/mc.png" width="60" height="40">
-                                    <img src="logo/pp.png" width="70" height="70">
-                                </div>
-                        
-                    </section>
+                            
+                    </article>
                 </main>
 
                     <!--Footer-->  
@@ -154,13 +112,9 @@
                     </footer>
 
             <!--JS-->
-            <script type="text/javascript"  src="../JWDP5/server.js"></script>   
-            <script type="text/javascript"  src="../JWDP5/app.js"></script>   
-            <script type="text/javascript"  src="JWDP5/controllers/camera.js"></script>   
-            <script type="text/javascript" src="JWDP5/models/Camera.js"></script>   
-            <script type="text/javascript"  src="JWDP5/routes/camera.js"></script>   
-            <script type="text/javascript" src="../JWDP5/package-lock.json"></script>   
-            <script type="text/javascript" src="JS/script.js"></script>       
+            <script type="text/javascript" src="../js/model/product.js"></script> 
+            <script type="text/javascript" src="../js/template/camera-product-template.js"></script>
+            <script type="text/javascript"  src="../js/product.js"></script>    
 
         </body>
 </html>

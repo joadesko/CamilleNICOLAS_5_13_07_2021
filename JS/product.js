@@ -1,11 +1,4 @@
-//function onClickProduct(productId){
-// getProduct(productId);
-//}
 getCamera();
-
-/*function getProductId(){
-  return new URL(location.href).searchParams.get("id");
-}*/
 
 function getCamera() { 
   const cameraId = new URL(location.href).searchParams.get("id");
@@ -25,18 +18,3 @@ function hydratePage(camera) {
   let mainContainerProduct = document.getElementById('cardProduct');
   mainContainerProduct.innerHTML = buildCameraProduct(camera); 
 }
-
-
-/*function displayOneProduct (product) {
-
-  const buildCameraProduct = document.getElementById('product')
-
-  const document = document.importNode(buildCameraProduct.content, true)
-
-  document.getElementById ("cardImg").src = product.imageUrl;
-  document.getElementById ("cardTitle").textContent = product.name;
-  document.getElementById ("cardDescription").textContent = product.description;
-  document.getElementById ("cardPrice").textContent = product.price;
-  document.getElementById ("cardLenses").textContent = product.lenses;
-  
-}*/
