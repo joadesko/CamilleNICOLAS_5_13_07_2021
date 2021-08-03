@@ -187,19 +187,21 @@ button:focus{
     font-weight: bold;
     font-size: 18px;
     margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+#cardPrice:hover{
+    background-color: rgba(79, 8, 87, 0.747);
 }
 
 #btn{
     width: 100px;
-    padding: 8px;
     font-size: 12px;
     background-color: rgb(218, 151, 50);
     border: none;
 }
 
-.btn-primary:hover{
-    background-color: rgba(79, 8, 87, 0.747);
-}
 /*Card*/
 
 /*Product*/
