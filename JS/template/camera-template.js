@@ -7,7 +7,7 @@ function buildCamera(camera){
                 <h5 id="cardTitle">${camera.name}</h5>
                     <p id="cardDescription">${camera.description}</p>
                     <p id="cardPrice">${camera.price}</p>
-                    <a href="product.html?id=${camera.id}" onclick="onClickProduct(this.href);return false;" id="btn" class="btn-primary">Voir l'article</a>
+                    <a href="pages/product.html?id=${camera.id}" id="btn" class="btn-primary">Voir l'article</a>
             </div>
         </div>
     </div>`;

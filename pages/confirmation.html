@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!--Css-->
-        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
 
         <!--FontAwesome Icone-->
         <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
@@ -26,11 +26,11 @@
         <!--Header-->
         <header role="heading" aria-label="En-tête du site">
             <div class="bg-light" role="banner" aria-label="Banner">
-                <div class="container-fluid">
-                    <div class="col-fluid row">
+                <div class="container">
+                    <div class="container-row">
                         <!--Logo-->
-                        <a class="navbar-brand" href="index.html">
-                            <img src="logo/logo.JPG" width="200" height="120" alt="Site du logo">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../logo/logo.JPG" width="200" height="120" alt="Site du logo">
                         </a>
 
                         <!--Barre de rechercher-->
@@ -40,14 +40,14 @@
                         </div>
 
                         <!--Menu de navigation-->
-                        <nav class="col navbar navbar-expand">
+                        <div class="col-fluid navbar navbar-expand">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" role="button" aria-label="Bouton" tabindex="0">
                                 <span class="navbar-toggle-icon"></span>
                             </button>
                                 <nav class="navbarContent" class="collapse navbar-collapse">
                                     <ul class="navbar-nav">
                                         <li class="col-4 col-md-3 nav-item-active">
-                                            <a class="nav-link font-weight-bold" href="index.html">Accueil</a>
+                                            <a class="nav-link font-weight-bold" href="../index.html">Accueil</a>
                                         </li>
                                         <li class="col-4 col-md-3 nav-item">
                                             <i class="far fa-user navbar-icone"></i>
@@ -65,13 +65,13 @@
                                             <a class="nav-link font-weight-bold" href="#">Commande</a>
                                         </li>    
                                         <li class=" col-4 col-md-3 nave-item">
-                                            <img src="logo/icone_onglet.png" width="30" height="30">
-                                            <a class="nav-link font-weight-bold" href="panier.html">Panier</a>
+                                            <img src="../logo/icone_onglet.png" width="30" height="30">
+                                            <a class="nav-link font-weight-bold" href="pages/basket.html">Panier</a>
                                             <span class="l-counter" style="display:none;"></span>
                                         </li>
                                     </ul>
                                 </nav>
-                        </nav>      
+                            </div>      
                     </div>                  
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 <section class="jumbotron">
                     <div class="row-jumbotron order-fraiming">
                         <div class="gif-order">
-                            <img src="gif/camera.gif" width="400" height="300" tabindex="0">
+                            <img src="../gif/camera.gif" width="400" height="300" tabindex="0">
                         </div>
                         <div class="thanksTitle">
                             <h3 class="valide" tabindex="0">Validé !</h3>
