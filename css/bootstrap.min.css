@@ -117,8 +117,12 @@ button:focus{
 }
 
 .card-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding-top: 0;
+    padding: 5px;
     background: #fff;
 }
 
@@ -170,22 +174,23 @@ button:focus{
 }
 
 #cardTitle{
-    font-size: 25px;
+    font-size: 22px;
 }
 
 #cardDescription{
-    font-size: 12px;
-    margin-bottom: 5px;
+    font-size: 11px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 #cardPrice{
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-weight: bold;
+    font-size: 18px;
+    margin: 0;
 }
 
 #btn{
-    width: 120px;
+    width: 100px;
     padding: 8px;
     font-size: 12px;
     background-color: rgb(218, 151, 50);
