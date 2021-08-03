@@ -19,7 +19,7 @@
         <!--Icone onglet-->
         <link rel="shortcut icon" href="logo/icone_onglet.png">
         
-        <title>Orinoco en ligne</title>
+        <title>Votre appareil photo !</title>
     </head>
         <body>
             <!--Header-->
@@ -76,59 +76,25 @@
                 </div>
             </header>
 
+                <!--Main-->
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
                     <article class="jumbotron">
-                        <div class="row-jumbotron product">
-                                <!--Tableau Structure Produit-->
-                                <div class="col card">
-                                    <table>
-                                        <thead id="productsList"></thead>
-                                    </table>
-                                </div>
-
-                                <!-- Product template-->
-                                <template id="product">
-                                    <a id="productLink" class="card" href="">
-                                        <div class="img">
-                                            <img id="productImage" src="" alt="">
-                                        </div>
-                                        <div class="description">                                   
-                                            <h2 id="productName" ></h2>
-                                            <p id="productDescription"></p>
-                                            <p id="productPrice"></p>
-                                        </div>
-                                        <div class="choice" role="search" aria-label="Choix du produit">
-                                            <label class="font-weight-bold" tabindex="0">Optique :</label>
-                                            <select name="quantity">
-                                                <option value="lenses" id="lenses" tabindex="0">
-                                                    
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label class="font-weight-bold" tabindex="0">Quantité :</label>
-                                                <select name="quantity" id="quantity">
-                                                    <option value="" tabindex="0">
-                                                    
-                                                    </option>
-                                                </select>
-                                        </div>
-                                    </a>
-                                </template>            
-                        </div>
-
+                        <div class="row-jumbotron product-info">
+                            <!--Template-->
+                            <div id="cardProduct" class="d-flex flex-row"></div>
+                            
                             <!--Bouton-->
                             <div class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
-                                <button class="form-button" id="button">Ajouter au panier</button>
+                                <button class="form-button" id="button"><a href="basket.html" alt="Panier de commande">Ajouter au panier</a></button>
                             </div>
                             
                     </article>
                 </main>
 
-                     <!--Footer-->  
-                     <footer role="contentinfo" aria-label="Pied-de-page">
+                    <!--Footer-->  
+                    <footer role="contentinfo" aria-label="Pied-de-page">
                         <div class="bg-dark" role="menu" aria-label="Informations complementaires">
-                            <ul class="navbar-brand list-unstyled">
+                            <ul class="col navbar-brand list-unstyled">
                                 <li class="nave-item-active">
                                     <a href="#" class="nav-link-footer font-weight-normal";>Catalogue</a>
                                 </li>
@@ -146,7 +112,9 @@
                     </footer>
 
             <!--JS-->
-            <script type="stylesheet"  src="/JS/produit.js"></script>   
+            <script type="text/javascript" src="./JS/model/product.js"></script> 
+            <script type="text/javascript" src="./JS/template/camera-product-template.js"></script>
+            <script type="text/javascript"  src="./JS/product.js"></script>    
 
         </body>
 </html>

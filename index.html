@@ -65,7 +65,7 @@
                                         </li>    
                                         <li class=" col-4 col-md-3 nave-item">
                                             <img src="logo/icone_onglet.png" width="30" height="30">
-                                            <a class="nav-link font-weight-bold" href="panier.html">Panier</a>
+                                            <a class="nav-link font-weight-bold" href="basket.html">Panier</a>
                                             <span class="l-counter" style="display:none;"></span>
                                         </li>
                                     </ul>
@@ -80,28 +80,8 @@
                 <main id="products-container" class="l-main l-center jumbotron" role="main" aria-label="Contenu principale">
                     <h1 class="title">Caméras Vintages</h1>
                     <h2 class="intro">Nos appareils photos en vente :</h2>
-                        <article class="card-body">
-                            <!--Tableau Structure Produit-->
-                            <div class="col card">
-                                <table>
-                                    <thead id="productsList"></thead>
-                                </table>
-                            </div>
-
-                            <!-- Product template-->
-                            <template id="product">
-                                <a id="productLink" class="card" href="">
-                                    <div class="img">
-                                        <img id="productImage" width="300" height ="250" src="" alt="">
-                                    </div>
-                                    <div class="description">                                   
-                                        <h2 id="productName" ></h2>
-                                        <p id="productDescription"></p>
-                                        <p id="productPrice"></p>
-                                    </div>
-                                </a>
-                            </template>   
-                        </article>         
+                        <!--Template-->
+                        <div id="productsList" class="d-flex flex-row"></div>
                 </main>
 
                     <!--Footer-->  
@@ -125,14 +105,9 @@
                     </footer>
 
             <!--JS-->
-            <script type="text/javascript"  src="../JWDP5/server.js"></script>   
-            <script type="text/javascript"  src="../JWDP5/app.js"></script>   
-            <script type="text/javascript"  src="JWDP5/controllers/camera.js"></script>   
-            <script type="text/javascript" src="JWDP5/models/Camera.js"></script>   
-            <script type="text/javascript"  src="JWDP5/routes/camera.js"></script>   
-            <script type="text/javascript" src="../JWDP5/package-lock.json"></script>
-            <script type="text/javascript" src="JS/ajax.js"></script> 
-            <script type="text/javascript" src="JS/orinoco.js"></script>       
+            <script type="text/javascript" src="./JS/model/product.js"></script> 
+            <script type="text/javascript" src="./JS/template/camera-template.js"></script>
+            <script type="text/javascript" src="./JS/orinoco.js"></script>       
 
         </body>
 </html>
