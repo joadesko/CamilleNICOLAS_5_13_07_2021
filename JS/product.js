@@ -1,5 +1,3 @@
-getCamera();
-
 function getCamera() { 
   const cameraId = new URL(location.href).searchParams.get("id");
   const url = `http://localhost:3000/api/cameras/${cameraId}`;
@@ -14,14 +12,10 @@ function getCamera() {
         });  
 }
 
-function logArrayLenses() {
-  document.getElementById("cardLenses").selectedIndex;
-}
-
-logArrayLenses();
+getCamera();
 
 function hydratePage(camera) {
   let mainContainerProduct = document.getElementById('cardProduct');
-  let lenses = document.querySelector('cardLenses')
   mainContainerProduct.innerHTML = buildCameraProduct(camera); 
 }
+
