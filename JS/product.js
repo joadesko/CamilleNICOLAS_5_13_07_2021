@@ -14,7 +14,14 @@ function getCamera() {
         });  
 }
 
+function logArrayLenses() {
+  document.getElementById("cardLenses").selectedIndex;
+}
+
+logArrayLenses();
+
 function hydratePage(camera) {
   let mainContainerProduct = document.getElementById('cardProduct');
+  let lenses = document.querySelector('cardLenses')
   mainContainerProduct.innerHTML = buildCameraProduct(camera); 
 }
