@@ -82,7 +82,11 @@
                         <div class="row-jumbotron">
                             <!--Template-->
                             <div id="cardProduct"></div>
-                            
+                            <div id="quantity">
+                                <a id="plus"><i class="fas fa-plus-circle"></i></a>
+                                    <span id="plusOrMinusClick" style="font-size:20px">0</span>
+                                <a id="minus"><i class="fas fa-minus-circle"></i>
+                            </div> 
                             <!--Bouton-->
                             <div class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
                                 <button class="form-button" id="button"><a href="basket.html" alt="Panier de commande">Ajouter au panier</a></button>
@@ -114,7 +118,8 @@
             <!--JS-->
             <script type="text/javascript" src="../js/model/product.js"></script> 
             <script type="text/javascript" src="../js/template/camera-product-template.js"></script>
-            <script type="text/javascript"  src="../js/product.js"></script>    
+            <script type="text/javascript"  src="../js/product.js"></script>  
+            <script type="text/javascript"  src="../js/quantity.js"></script  
 
         </body>
 </html>

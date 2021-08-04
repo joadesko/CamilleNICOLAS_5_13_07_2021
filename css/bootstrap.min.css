@@ -207,10 +207,8 @@ button:focus{
 /*Card*/
 
 /*Product*/
-
-
 #cardProduct{
-    margin-bottom: 88px;
+    margin-bottom: 40px;
 }
 
 .infoProduct{
@@ -255,7 +253,7 @@ button:focus{
 }
 
 #cardPriceProduct{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold; 
     color: rgb(218, 151, 50);
 }
@@ -265,25 +263,38 @@ button:focus{
     padding: 4px;
 }
 
-.quantity{
-    margin-bottom: 15px;
+#quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-left: 180px;
+    margin-top: -100px;
+}
+
+#plusOrMinusClick{
+    font-weight: bold;
+    color: rgb(218, 151, 50);
 }
 
 .fa-plus-circle{
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 .fa-minus-circle{
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
+    margin-left: 8px;
 }
 
 .button-add-cart{
     display: flex;
     justify-content: center;
 }
+
 /*Product*/
 
 /*Formulaire*/
