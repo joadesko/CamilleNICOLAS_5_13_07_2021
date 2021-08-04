@@ -18,4 +18,3 @@ function hydratePage(camera) {
   let mainContainerProduct = document.getElementById('cardProduct');
   mainContainerProduct.innerHTML = buildCameraProduct(camera); 
 }
-
