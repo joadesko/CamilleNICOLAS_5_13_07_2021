@@ -17,11 +17,15 @@ a:hover{
 }
 
 /*Header*/
-.container-fluid{
+.header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    margin-left: 5em;
+}
+
+.img-header{
+    margin-right: 5em;
 }
 
 .col-4{
@@ -70,7 +74,7 @@ button:focus{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 5px;
-    width: 200px;
+    width: 17em;
     color: rgb(144, 70, 194);
 }
 
@@ -104,6 +108,10 @@ button:focus{
 .navbar-icone{
     color: rgb(218, 151, 50);
 }
+
+.nav-item{
+    padding-right: 80px;
+}
 /*Lien navigation*/
 
 /*Card*/
@@ -131,7 +139,7 @@ button:focus{
 .jumbotron{
     margin: 0;
     padding-bottom: 3.5em;
-    height: 663px;
+    height: 673px;
 }
 
 .title{ 
@@ -203,7 +211,6 @@ button:focus{
     background-color: rgb(218, 151, 50);
     border: none;
 }
-
 /*Card*/
 
 /*Product*/
@@ -237,6 +244,7 @@ button:focus{
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 #cardTitleProduct{
@@ -401,10 +409,14 @@ button:focus{
 /*Formulaire*/
 
 /*Order*/
+.order-fraiming{
+    padding-top: 30px;
+}
+
 .gif-order{
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    margin-top: 0;
 }
 
 .thanksTitle{
@@ -412,12 +424,12 @@ button:focus{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 48px;
     text-align: center;
+    padding-top: 20px;
 }
 
 .valide{
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .buttonOrder{
