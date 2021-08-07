@@ -3,9 +3,6 @@
   hydratePage(products)
 })()
 
-const linkProduct = link.id
-link.id = linkProduct
-
 async function getProducts() {
   return fetch('http://localhost:3000/api/cameras')
     .then((httpBodyResponse) => httpBodyResponse.json())

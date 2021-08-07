@@ -1,13 +1,12 @@
 //EventListener boutons quantité
-let parentClicks = 0;
-let childClicks = 0;
+let quantityClicks = 0;
 
 document
   .getElementById("plus")
   .addEventListener("click", function() {
   document
     .getElementById("plusOrMinusClick")
-    .innerText = (++parentClicks) + '';
+    .innerText = (++quantityClicks) + '';
 });
 
 document
@@ -18,5 +17,5 @@ document
   
   document
     .getElementById("plusOrMinusClick")
-    .innerText = (--parentClicks) + '';
+    .innerText = (--quantityClicks) + '';
 });
