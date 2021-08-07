@@ -1,23 +1,69 @@
 /**Responsive Pixel 2XL 1204px**/
 
 /*index*/
-@media (max-width: 990px){
-    .dropdown{
-        margin: 20px;
-    }
-}
-
 @media (max-width: 411px){
-    
+    .title{
+        padding-top: 20px;
+    }
 }
 
 /*Product*/
 @media (max-width: 411px){
 
+    #cardTitleProduct{
+        margin-top: 20px;
+    }
+
+    #quantity{
+        margin-left: -14em !important;
+    }
 }
 
 /*Panier*/
-@media (max-width: 411px){
+@media (max-width: 586px){
+
+    .input-form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cp{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tel-mail{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #input{
+        width: 20em !important;
+    }
+
+    #input-address{
+        width: 20em !important;
+    }
+
+    #input-tel{
+        width: 20em !important;
+    }
+
+    #input-mail{
+        width: 20em !important ;
+    }
+    
+    #input-commentary{
+        width: 20em !important;
+    }
 
 }
 

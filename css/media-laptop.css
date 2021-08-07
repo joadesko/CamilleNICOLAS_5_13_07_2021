@@ -27,11 +27,13 @@
 @media (max-width: 990px){
     .dropdown{
         visibility: visible !important;
+        margin: 20px;
     }
 }
 
 /*Product*/
 @media (max-width: 1204px){
+    
     .product{
         width: 100%;
     }

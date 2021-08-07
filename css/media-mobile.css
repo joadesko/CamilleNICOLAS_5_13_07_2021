@@ -2,7 +2,9 @@
 
 /*index*/
 @media (max-width: 375px){
-
+    .dropdown{
+        margin-left: 0px;
+    }
 }
 
 /*Product*/
@@ -10,12 +12,36 @@
 
 }
 
+
 /*Panier*/
-@media (max-width: 375px){
+@media (max-width: 410px){
+
+    #input{
+        width: 18em !important;
+    }
+
+    #input-address{
+        width: 18em !important;
+    }
+
+    #input-tel{
+        width: 18em !important;
+    }
+
+    #input-mail{
+        width: 18em !important ;
+    }
+    
+    #input-commentary{
+        width: 18em !important;
+    }
 
 }
 
-/*Order*/
-@media (max-width: 375px){
+/**Order**/
 
+@media (max-width: 450px){
+    .gif-order{
+        width: 300px !important;
+    }
 }
