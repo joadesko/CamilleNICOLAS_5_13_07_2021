@@ -1,73 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Responsive Design-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/media-laptop.css">
-        <link rel="stylesheet" href="css/media-tablet.css">
-        <link rel="stylesheet" href="css/media-pixel-2xl.css">
-        <link rel="stylesheet" href="css/media-mobile.css">
+        <link rel="stylesheet" href="../css/media-laptop.css">
+        <link rel="stylesheet" href="../css/media-tablet.css">
+        <link rel="stylesheet" href="../css/media-pixel-2xl.css">
+        <link rel="stylesheet" href="../css/media-mobile.css">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!--Css-->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+
         <!--FontAwesome Icone-->
         <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
 
-        <!--Police-->
-        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
         <!--Icone onglet-->
-        <link rel="shortcut icon" href="logo/icone_onglet.png">
+        <link rel="shortcut icon" href="../logo/icone_onglet.png">
         
-        <title>Orinoco en ligne</title>
+        <title>Votre appareil photo !</title>
     </head>
         <body>
             <!--Header-->
             <header class="header">
                 <nav class="navbar navbar-expand-lg py-3">
                     <div class="container">
-                        <a href="index.html">
-                            <img src="logo/logo.JPG" class="img-header" alt="Site du logo">
+                        <a href="../index.html">
+                            <img src="../logo/logo.JPG" class="img-header" alt="Site du logo">
                         </a>
                         
                         <!--Menu déroulant-->
                         <div class="dropdown">
                             <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
                             <div id="myDropdown" class="dropdown-content">
-                                <a href="index.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
+                                <a href="../index.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
                                 <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
                                 <a href="#" class="e font-weight-bold" style="color: rgb(218, 151, 50);">Mon compte</a>
-                                <a href="pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
-                                <a href="pages/basket.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Mon panier</a></li>
+                                <a href="../pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
+                                <a href="../pages/basket.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Mon panier</a></li>
                             </div>
                         </div>
 
                         <!--Menu de navigation-->
                         <div id="navbarSupportedContent" class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="index.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item active"><a href="../index.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Notifications</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Compte</a></li>
-                                <li class="nav-item"><a href="pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
-                                <li class="nav-item"><a href="pages/basket.html" class="nav-link text-uppercase font-weight-bold">Panier</a></li>
+                                <li class="nav-item"><a href="../pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
+                                <li class="nav-item"><a href="../pages/basket.html" class="nav-link text-uppercase font-weight-bold">Panier</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </header>
                 <!--Main-->
-                <main id="products-container" class="l-main l-center jumbotron" role="main" aria-label="Contenu principale">
-                    <h1 class="title">Caméras Vintages</h1>
-                    <h2 class="intro">Nos appareils photos en vente :</h2>
-                        <!--Template-->
-                        <div id="productsList" class="d-flex flex-row"></div>
+                <main class="l-main l-center" role="main" aria-label="Contenu principale">
+                    <article class="jumbotron">
+                        <div class="row-jumbotron">
+                            <!--Template-->
+                            <div id="cardProduct"></div>
+                            <!--Quantité-->
+                            <div id="quantity">
+                                <a id="plus"><i class="fas fa-plus-circle"></i></a>
+                                    <span id="plusOrMinusClick" style="font-size:20px">0</span>
+                                        <a id="minus"><i class="fas fa-minus-circle"></i></a>
+                            </div> 
+                            <!--Bouton-->
+                            <div id="btnAddCart" role="button" aria-label="Bouton" tabindex="0">
+                                <button id="button">Ajouter au panier</button>
+                            </div>  
+                    </article>
                 </main>
                     <!-- Footer -->
                     <footer class="text-center text-white" style="background-color: #f1f1f1;">
@@ -107,9 +115,11 @@
                     </footer>
 
             <!--JS-->
-            <script type="text/javascript" src="js/model/nav-toggle.js"></script> 
-            <script type="text/javascript" src="js/model/product.js"></script> 
-            <script type="text/javascript" src="js/template/camera-template.js"></script>
-            <script type="text/javascript" src="js/orinoco.js"></script>
+            <script type="text/javascript" src="../js/model/product.js"></script> 
+            <script type="text/javascript" src="../js/template/camera-product-template.js"></script>
+            <script type="text/javascript"  src="../js/product.js"></script>  
+            <script type="text/javascript"  src="../js/quantity.js"></script>
+            <script type="text/javascript"  src="../js/addProduct.js"></script>
+            <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
         </body>
 </html>

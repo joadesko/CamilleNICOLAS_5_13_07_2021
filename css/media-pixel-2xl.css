@@ -1,0 +1,27 @@
+/**Responsive Pixel 2XL 1204px**/
+
+/*index*/
+@media (max-width: 990px){
+    .dropdown{
+        margin: 20px;
+    }
+}
+
+@media (max-width: 411px){
+    
+}
+
+/*Product*/
+@media (max-width: 411px){
+
+}
+
+/*Panier*/
+@media (max-width: 411px){
+
+}
+
+/*Order*/
+@media (max-width: 411px){
+
+}

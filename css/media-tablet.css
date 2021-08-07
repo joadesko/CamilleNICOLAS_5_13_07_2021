@@ -1,0 +1,37 @@
+/**Responsive Tablet 1204px**/
+
+/*index*/
+@media (max-width: 768px){
+    .footer-list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nave-item-active{
+        margin: 10px;
+    }
+
+    .nave-item{
+        margin: 10px;
+    }
+    
+}
+
+/*Product*/
+@media (max-width: 768px){
+
+    .product{
+        flex-direction: column;
+    }
+
+    #quantity{
+        margin-left: -30em !important;
+    }
+}
+
+/*Panier*/
+@media (max-width: 768px){
+
+}
