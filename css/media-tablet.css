@@ -1,0 +1,36 @@
+/**Responsive Tablet 1204px**/
+
+/*index*/
+@media (max-width: 768px){
+   
+    .header{
+        margin-left: 0;
+    }
+
+    .nav-item{
+        padding-right: 0px;
+    }
+
+    .nav-item-active{
+        margin-left: -50px;
+    }
+    
+}
+
+/*Product*/
+@media (max-width: 768px){
+
+    .product{
+        flex-direction: column;
+    }
+}
+
+/*Panier*/
+@media (max-width: 768px){
+
+}
+
+/*Order*/
+@media (max-width: 768px){
+
+}

@@ -1,0 +1,31 @@
+/**Responsive Pixel 2XL 1204px**/
+
+/*index*/
+@media (max-width: 411px){
+    .row{
+        width: 100%;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+    .navbar{
+        visibility: hidden;
+    }
+}
+
+/*Product*/
+@media (max-width: 411px){
+
+}
+
+/*Panier*/
+@media (max-width: 411px){
+
+}
+
+/*Order*/
+@media (max-width: 411px){
+
+}

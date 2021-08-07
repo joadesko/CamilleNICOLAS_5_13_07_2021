@@ -1,0 +1,87 @@
+/**Responsive Laptop 1204px**/
+
+/*index*/
+@media (max-width: 1204px){
+    .navbar-expand{
+       margin-top: 40px;
+       margin-bottom: -40px;
+    }
+
+    .search-bar{
+        margin-left: 320px;
+    }
+
+    #productsList{
+        flex-wrap: wrap;
+    }
+
+    .jumbotron{
+        height: 0px;
+    }
+
+    .p-2{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1023px){
+    .search-bar{
+        margin-left: 200px;
+    }
+
+}
+
+@media (max-width: 886px){
+    .search-bar{
+        margin-left: 100px;
+    }
+
+}
+
+@media (max-width: 924px){
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item-active{
+        padding-top: 25px;
+    }
+}
+
+/*Product*/
+@media (max-width: 1204px){
+    .product{
+        width: 100%;
+    }
+
+    #cardTitleProduct{
+        margin-top: 10px;
+    }
+
+    #cardDescriptionProduct{
+        margin-top: 10px; 
+    }
+
+    .choiceLenses{
+        margin-top: 30px;
+    }
+
+    #quantity{
+        margin: 300px;
+        margin-top: -150px;
+    }
+}
+
+/*Panier*/
+@media (max-width: 1204px){
+
+}
+
+/*Order*/
+@media (max-width: 1204px){
+    #button-order{
+        width: 35%;
+    }
+}

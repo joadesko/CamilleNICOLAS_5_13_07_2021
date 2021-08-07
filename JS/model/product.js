@@ -8,3 +8,4 @@ class Camera{
         this.lenses = product.lenses;
     }
 }
+

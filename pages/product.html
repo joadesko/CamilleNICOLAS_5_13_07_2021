@@ -6,6 +6,10 @@
 
         <!--Responsive Design-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/media-laptop.css">
+        <link rel="stylesheet" href="../css/media-tablet.css">
+        <link rel="stylesheet" href="../css/media-pixel-2xl.css">
+        <link rel="stylesheet" href="../css/media-mobile.css">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -45,26 +49,26 @@
                                 </button>
                                     <nav class="navbarContent" class="collapse navbar-collapse">
                                         <ul class="navbar-nav">
-                                            <li class="col-4 col-md-3 nav-item-active">
+                                            <li class="nav-item-active">
                                                 <a class="nav-link font-weight-bold" href="../index.html">Accueil</a>
                                             </li>
-                                            <li class="col-4 col-md-3 nav-item">
+                                            <li class="nav-item">
                                                 <i class="far fa-user navbar-icone"></i>
                                                 <a class="nav-link font-weight-bold" href="#">Profil</a>
                                             </li>
-                                            <li class="col-4 col-md-3 nav-item">
+                                            <li class="nav-item">
                                                 <i class="far fa-bell navbar-icone"></i>
                                                 <a class="nav-link font-weight-bold" href="#">Notifications</a>
                                             </li>
-                                            <li class="col-4 col-md-3 nav-item">
+                                            <li class="nav-item">
                                                 <i class="fas fa-camera-retro navbar-icone"></i>
                                                 <a class="nav-link font-weight-bold" href="#">Commande</a>
-                                            </li>    
-                                            <li class=" col-4 col-md-3 nave-item">
-                                                <img src="../logo/icone_onglet.png" width="30" height="30">
-                                                <a class="nav-link font-weight-bold" href="../pages/basket.html">Panier</a>
-                                                <span class="l-counter" style="display:none;"></span>
                                             </li>
+                                            <li class="nav-item">
+                                                <img src="../logo/icone_onglet.png" class="logo-nav">
+                                                <a class="nav-link font-weight-bold" href="../pages/basket.html">Panier</a>
+                                            </li>      
+                                            
                                         </ul>
                                     </nav>
                             </div>      
@@ -72,26 +76,24 @@
                     </div>
                 </div>
             </header>
-
                 <!--Main-->
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
                     <article class="jumbotron">
                         <div class="row-jumbotron">
                             <!--Template-->
                             <div id="cardProduct"></div>
+                            <!--Quantité-->
                             <div id="quantity">
                                 <a id="plus"><i class="fas fa-plus-circle"></i></a>
                                     <span id="plusOrMinusClick" style="font-size:20px">0</span>
-                                <a id="minus"><i class="fas fa-minus-circle"></i>
+                                        <a id="minus"><i class="fas fa-minus-circle"></i></a>
                             </div> 
                             <!--Bouton-->
-                            <div class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
-                                <button class="form-button" id="button"><a href="basket.html" alt="Panier de commande">Ajouter au panier</a></button>
-                            </div>
-                            
+                            <div id="btnAddCart" class="button-add-cart" role="button" aria-label="Bouton" tabindex="0">
+                                <button class="form-button" id="button">Ajouter au panier</button>
+                            </div>  
                     </article>
                 </main>
-
                     <!--Footer-->  
                     <footer role="contentinfo" aria-label="Pied-de-page">
                         <div class="bg-dark" role="menu" aria-label="Informations complementaires">
@@ -116,7 +118,8 @@
             <script type="text/javascript" src="../js/model/product.js"></script> 
             <script type="text/javascript" src="../js/template/camera-product-template.js"></script>
             <script type="text/javascript"  src="../js/product.js"></script>  
-            <script type="text/javascript"  src="../js/quantity.js"></script  
-
+            <script type="text/javascript"  src="../js/quantity.js"></script>
+            <script type="text/javascript"  src="../js/addProduct.js"></script>
+            <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
         </body>
 </html>
