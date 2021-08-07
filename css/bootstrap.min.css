@@ -389,7 +389,7 @@ a:hover{
 }
 
 #input-mail{
-    width: 17.5em;
+    width: 18.7em;
     margin-bottom: 20px;
     height: 40px; 
     font-size: 18px;
@@ -414,7 +414,6 @@ a:hover{
     border: none;
     border-radius: 5px;
 }
-
 
 #validOrder{
     display: flex;
@@ -471,10 +470,15 @@ a:hover{
     padding-top: 30px;
 }
 
-.gif-order{
+.div-gif-order{
     display: flex;
     justify-content: center;
     margin-top: 0;
+}
+
+.gif-order{
+    width: 400px;
+    height: 300px;
 }
 
 .thanksTitle{

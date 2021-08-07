@@ -22,6 +22,10 @@
 /*Product*/
 @media (max-width: 768px){
 
+    #cardImgProduct{
+        width: 100% !important;
+    }
+    
     .product{
         flex-direction: column;
     }
@@ -33,5 +37,30 @@
 
 /*Panier*/
 @media (max-width: 768px){
-
+    .formTitle{
+        text-align: center;
+    }
 }
+
+/*Order*/
+@media (max-width: 651px){
+    .buttonOrder{
+        flex-direction: column;
+    }
+
+    #button-back-home{
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+
+    
+}
+
+@media (max-width: 673px){
+    
+    .return-lign{
+        display: block;
+    }
+}
+
+
