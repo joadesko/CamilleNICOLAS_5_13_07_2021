@@ -1,19 +1,14 @@
 /**Responsive Pixel 2XL 1204px**/
 
 /*index*/
-@media screen and (max-width: 411px){
-
-    .header{
-        margin: 0;
-    }
+@media (max-width: 990px){
     .dropdown{
-        visibility: visible;
-        
+        margin: 20px;
     }
+}
 
-    .navbar-expand{
-        visibility: hidden;
-    }
+@media (max-width: 411px){
+    
 }
 
 /*Product*/
