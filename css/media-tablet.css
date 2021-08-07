@@ -2,17 +2,19 @@
 
 /*index*/
 @media (max-width: 768px){
-   
-    .header{
-        margin-left: 0;
+    .footer-list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
-    .nav-item{
-        padding-right: 0px;
+    .nave-item-active{
+        margin: 10px;
     }
 
-    .nav-item-active{
-        margin-left: -50px;
+    .nave-item{
+        margin: 10px;
     }
     
 }
@@ -23,14 +25,13 @@
     .product{
         flex-direction: column;
     }
+
+    #quantity{
+        margin-left: -30em !important;
+    }
 }
 
 /*Panier*/
-@media (max-width: 768px){
-
-}
-
-/*Order*/
 @media (max-width: 768px){
 
 }

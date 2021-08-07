@@ -24,21 +24,6 @@
     }
 }
 
-@media (max-width: 1023px){
-    .search-bar{
-        margin-left: 200px;
-    }
-
-}
-
-@media (max-width: 886px){
-    .search-bar{
-        margin-left: 100px;
-    }
-
-}
-
-
 @media (max-width: 990px){
     .dropdown{
         visibility: visible !important;
@@ -64,8 +49,7 @@
     }
 
     #quantity{
-        margin: 300px;
-        margin-top: -150px;
+        margin-left: 0px !important;
     }
 }
 
@@ -74,9 +58,3 @@
 
 }
 
-/*Order*/
-@media (max-width: 1204px){
-    #button-order{
-        width: 35%;
-    }
-}
