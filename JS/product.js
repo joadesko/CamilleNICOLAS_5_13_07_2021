@@ -53,7 +53,7 @@ btn_addCart.addEventListener("click", (event) =>{
   }
   console.log(productAdd);
 
-  //envoyer les données sélectionnnées au localStoraga
+  //envoyer les données sélectionnnées au localStorage
   let basket = localStorage.getItem('myBasket');
   if (basket){
   }else{
@@ -75,7 +75,7 @@ btn_addCart.addEventListener("click", (event) =>{
 
   localStorage.setItem('myBasket', basket);
 
-  //convertir les données en JSON dans le localstorage en objet JS
-  let productSaveInLocalStorage = JSON.parse(localStorage.getItem('myBasket'));
+  //Convertir les données en JSON dans le localStorage en objet JS
+  let productSaveInLocalStorage = JSON.parse(localStorage.getItem ('myBasket'));
   console.log(productSaveInLocalStorage);
 });
