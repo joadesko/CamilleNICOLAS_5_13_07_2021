@@ -62,7 +62,10 @@
                 <!--Main-->
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
                     <section class="jumbotron">
-                        <div id="addProductBasket" tabindex="0"></div>
+                        <!--Template-->
+                        <div id="getProductFromLocalStorageToBasket" tabindex="0"></div>
+                        <span class="cart-total"></span>
+                        <!--Formaulaire-->
                         <form name="orderForm" class="form-order" role="search" aria-label="Formulaire">
                             <h4 class="formTitle">Merci de complèter ce formulaire pour valider la commande :</h4>
                                 <div class="input-form">
@@ -87,8 +90,8 @@
                                 </div>
                         </form>
                         <!--Bouton-->
-                        <div id="validOrder" role="button" aria-label="Bouton" tabindex="0">
-                            <button id="button"><a href="confirmation.html" alt="Panier de commande"  onclick="oninvalid(e);">Validé la commande</a></button>
+                        <div class="btn-basket" role="button" aria-label="Bouton" tabindex="0">
+                            <button id="validOrder" class="button"><a href="confirmation.html" alt="Panier de commande"  onclick="oninvalid(e);">Validé la commande</a></button>
                         </div>
 
                         <!--Paiement-->
@@ -101,8 +104,8 @@
                 </main>
                     <!-- Footer -->
                     <footer class="text-center text-white" style="background-color: #f1f1f1;">
-                        <div class="container pt-4">
-                            <section class="mb-4">
+                        <div class="container-footer">
+                            <section class="rs">
                                 <!--Facebook-->
                                 <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button"data-mdb-ripple-color="dark" title="Venez visiter notre page Facebook !"><i class="fab fa-facebook-f"></i></a>
                           

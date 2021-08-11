@@ -1,41 +1,38 @@
-/*function getItemLocalStorage() {
-    let cameraImage = localStorage.getItem('camera.imageUrl');
-    let cameraName = localStorage.getItem('camera.name');
-    let cameraPrice = localStorage.getItem('camera.price');
-    let cameraLenses = localStorage.getItem('lense');
-    let cameraQuantity = localStorage.getItem('camera.quantity');
-  
-    document.getElementById('cardImgProductBasket').value = cameraImage;
-    document.getElementById('cardTitleProductBasket').value =  cameraName;
-    document.getElementById('cardPriceProductBasket').value = cameraPrice;
-    document.getElementById('cardLensesBasket').value = cameraLenses;
-    document.getElementById('cardQuantityBasket').value = cameraQuantity;
-}
+//Convertir les données en Stringify du localStorage vers basket.js 
+localStorage.getItem('myBasket', basket);
 
-function getItem() { 
-    const cameraId = new URL(location.href).searchParams.get("id");
-    const url = `http://localhost:3000/api/cameras/${cameraId}`;
-    fetch(url)
-    .then((httpBodyResponse) => httpBodyResponse.json())
-      .then((camera) =>{
-        console.log(camera);
-        hydratePage(camera);
-        })
-          .catch((error) => {
-            alert(error)
-          });  
-  }
-  
-  getItem();
-  
-  function hydratePage(camera) {
-    let mainContainerProduct = document.getElementById('addProductBasket');
-    mainContainerProduct.innerHTML = buildCameraProduct(camera); 
-  }*/
 
+const basketDisplay = document.querySelector("#addProductInCart");
+console.log(basketDisplay);
+
+let productDisplayCart = [];
+
+
+//Sélection de toutes les références des boutons icones supprimer
+let btnSupprimer = document.querySelectorAll(".btn-supprimer")
+console.log(btnSupprimer)
+
+//Id du produit qui va être supprimer en cliquant sur le bouton
+for (let l = 0; 1 < btnSupprimer.length; l++){
+  btnSupprimer[l].addEventListener("click" , (event) =>{
+    event.preventDefault();
+
+    let id_selection_suppression = productSaveInLocalStorage[l].selectedCamera._id;
+    console.log("id_selection_suppression");
+    console.log(id_selection_suppression);
+
+    productSaveInLocalStorage = productSaveInLocalStorage.filter( el => el.selectedCamera._id !== id_selection_suppression);
+    console.log(id_selection_suppression)
+
+    localStorage.setItem("mybasket", JSON.stringify(productSaveInLocalStorage));
+    alert("La caméra a été supprimer")
+    window.location.href = "basket.html";
+
+  })
+};
 //Vérification de l'adresse mail
-let email = document.querySelector('input-mail');
-email.oninvalid = function(e) {
+let email = document.getElementById("input-mail");
+email.invalid = function(e) {
 	e.target.setCustomValidity("");
 	if (!e.target.validity.valid) {
 		if (e.target.value.length == 0) {
