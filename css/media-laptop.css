@@ -50,10 +50,19 @@
         margin-top: 30px;
     }
 
-    #quantity{
-        margin-left: 0px !important;
+    #cardImgProduct{
+        width: 65% !important;  
+    }
+    
+    .product{
+        flex-direction: column;
+    }
+
+    .cardBodyProduct{
+        margin-bottom: 0 !important;
     }
 }
+
 
 /*Panier*/
 @media (max-width: 1204px){

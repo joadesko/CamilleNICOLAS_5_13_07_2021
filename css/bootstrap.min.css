@@ -155,7 +155,7 @@ a:hover{
     text-shadow: 0.1em 0.1em 0.2em black;
     font-family: 'Kalam', sans-serif !important;
     font-size: 50px;
-    margin-top: -20px;
+    margin-top: -41px;
 }
 
 .intro{
@@ -163,7 +163,6 @@ a:hover{
     color: #fff;
     text-shadow: 0.1em 0.1em 0.2em black;
     padding-top : 30px;
-    padding-bottom: 15px;
     font-family: 'Kalam', sans-serif !important;
 }
 
@@ -276,7 +275,7 @@ a:hover{
     color: rgb(218, 151, 50);
 }
 
-.cardLensesProduct{
+.lenses-product{
     width: 165px;
     padding: 4px;
 }
@@ -285,15 +284,13 @@ a:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-    margin-left: -170px;
-    margin-top: -100px;
+    margin-top: 20px;
 }
 
 #plusOrMinusClick{
     font-weight: bold;
     color: rgb(218, 151, 50);
+    width: 45px;
 }
 
 .fa-plus-circle{
@@ -308,10 +305,11 @@ a:hover{
     margin-left: 8px;
 }
 
-#btnAddCart{
+.btnAddCart{
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
+    margin-top: 45px;
     font-family: 'Kalam', sans-serif !important;
 }
 
@@ -432,7 +430,7 @@ a:hover{
     margin-right: 10px;
 }
 
-#button{
+.button{
     font-family: 'Kalam', sans-serif !important;
     width: 15em;
     height: 70px;
@@ -450,14 +448,14 @@ a:hover{
     box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-#button:hover{
+.button:hover{
     transform: scale(1.1);
     background-position: -100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     
 }
 
-#button:active{
+.button:active{
     transform: scale(1);
     background-position: 500px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
