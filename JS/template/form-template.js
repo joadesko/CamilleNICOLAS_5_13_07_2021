@@ -1,4 +1,4 @@
-//Structure du formulaire
+//------------------------------------------------Structure du formulaire------------------------------------//
 const form = () => {
 
     const positionForm = document.querySelector("#form");
@@ -37,3 +37,21 @@ const form = () => {
 };
 
 form();
+
+
+//--------------------------------------------Validation des champs du formulaire-----------------------------------------//
+
+
+//---------------------------------------------Vérification de l'adresse mail---------------------------------------------//
+let email = document.getElementById("input-mail");
+email.invalid = function(e) {
+	e.target.setCustomValidity("");
+	if (!e.target.validity.valid) {
+		if (e.target.value.length == 0) {
+e.target.setCustomValidity("Ce champ est obligatoire");
+		} else {
+e.target.setCustomValidity
+alert("Entrez une adresse valide. Exemple : contact@nom.com");
+		}
+	}
+};
