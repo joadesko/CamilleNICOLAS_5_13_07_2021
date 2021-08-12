@@ -317,7 +317,14 @@ a:hover{
 
 /*Formulaire*/
 .empty-basket{
-    border: solid 2px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Kalam', sans-serif !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-order{
