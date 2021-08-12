@@ -1,10 +1,9 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+//Au clique du menu
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close the dropdown menu if the user clicks outside of it
+// fermer le menu du clique à l'extérieur
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
 

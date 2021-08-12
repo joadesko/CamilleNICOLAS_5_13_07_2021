@@ -1,3 +1,5 @@
+//---------------------------------------Récupération des caméras de l'API avec l'id-----------------------------------------//
+
 //Création d'une variable pour la caméra sélectionné
 let selectedCamera;
 
@@ -29,22 +31,26 @@ function hydratePage() {
   }
 }
 
+//--------------------------------------------Ajout de la caméra au panier------------------------------------------------//
+
 //sélection du bouton ajouter le produit au panier
 const btn_addCart = document.querySelector("#add_product_to_basket");
 console.log(btn_addCart);
 
 //écouter le bouton et envoyer le panier
 btn_addCart.addEventListener("click", (event) =>{
+  
     event.preventDefault();
 
   let selectLenses = document.getElementById("cameraLenses");
-  console.log('valeur selectionne == > ' + selectLenses.value);
+  console.log('Lense selectionné == > ' + selectLenses.value);
 
   const quantity = document.getElementById("plusOrMinusClick").valueAsNumber;
   console.log(quantity);
 
   //récupérer les données sélectionnées
   let productAdd = {
+      imageUrl: selectedCamera.imageUrl,
       id: selectedCamera._id,
       name: selectedCamera.name,
       price: (selectedCamera.price / 100)*quantity,
@@ -61,10 +67,6 @@ btn_addCart.addEventListener("click", (event) =>{
   }
 
   //Chercher si le produit déjà existant dans le localStorage
-  function findProductInBasket(camera){
-    return camera.id === productAdd.id;
-  }
-
   const add2Product = inventaire.find( product => product.id === productToAdd.id);
   if (add2Product){
     add2Product.quantity = add2Product.quantity + productAdd.quantity;

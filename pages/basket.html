@@ -62,38 +62,10 @@
                 <!--Main-->
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
                     <section class="jumbotron">
-                        <!--Template-->
+                        <!--Panier final-->
                         <div id="getProductFromLocalStorageToBasket" tabindex="0"></div>
-                        <span class="cart-total"></span>
-                        <!--Formaulaire-->
-                        <form name="orderForm" class="form-order" role="search" aria-label="Formulaire">
-                            <h4 class="formTitle">Merci de complèter ce formulaire pour valider la commande :</h4>
-                                <div class="input-form">
-                                    <div class="name">
-                                        <input type="text" id="input" pattern="[0-20]{,3}"  title="Votre nom de famille" name="Nom" placeholder="Nom" aria-labelledby="Nom"required>
-                                        <input type="text" id="input" pattern="[0-15]{,3}" title="Votre prénom" name="Prénom"  placeholder="Prénom" aria-labelledby="Prénom" required>
-                                    </div>
-                                    <div class="address">
-                                        <input type="text" id="input-address" pattern="[0-30]{,3}" title="Votre adresse postale" name="Adresse" placeholder="Adresse" aria-labelledby="Adresse" required>
-                                    </div>
-                                    <div class="cp">
-                                        <input type="text" id="input" pattern="[0-5]{,3}" title="Le code postale" name="CP" placeholder="Code Postale" aria-labelledby="Code Postale" required>
-                                        <input type="text" id="input" pattern="[0-20]{,3}" title="La ville" name="Ville" placeholder="Ville" aria-labelledby="Ville" required>
-                                    </div>
-                                    <div class="tel-mail">
-                                        <input type="tel" id="input-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Merci de nous communiquer votre numéro de téléphone" name="Téléphone" placeholder="Téléphone" aria-labelledby="Téléphone" required>
-                                        <input type="email" id="input-mail" pattern="[0-20]{,3}" title="Merci de nous communiquer votre adresse mail"  placeholder="E-mail" required>
-                                    </div>
-                                    <div class="commentary">
-                                        <textarea type="text" id="input-commentary" maxlength="200" name="Commentaire" title="Informations complémentaires" placeholder="Informations complémentaires à la livraison" aria-labelledby="Informations complementaires"></textarea>
-                                    </div>
-                                </div>
-                        </form>
-                        <!--Bouton-->
-                        <div class="btn-basket" role="button" aria-label="Bouton" tabindex="0">
-                            <button id="validOrder" class="button"><a href="confirmation.html" alt="Panier de commande"  onclick="oninvalid(e);">Validé la commande</a></button>
-                        </div>
-
+                        <!--Formulaire-->
+                        <div id="form" tabindex="0"></div>
                         <!--Paiement-->
                         <div class="payement">
                             <img src="../logo/visa.png" width="70" height="70" class="visa-logo">
@@ -141,6 +113,7 @@
 
                 <!--JS-->
                 <script type="text/javascript"  src="../js/basket.js"></script>
+                <script type="text/javascript"  src="../js/template/form-template.js"></script> 
                 <script type="text/javascript"  src="../js/template/camera-product-basket-template.js"></script> 
                 <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
         </body>

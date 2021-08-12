@@ -316,6 +316,10 @@ a:hover{
 /*Product*/
 
 /*Formulaire*/
+.empty-basket{
+    border: solid 2px;
+}
+
 .form-order{
     display: flex;
     justify-content: center;
@@ -334,7 +338,7 @@ a:hover{
     margin: 10px;
 }
 
-#input{
+.input{
     width: 15em;
     height: 40px;
     font-size: 18px;
@@ -343,15 +347,7 @@ a:hover{
     border-radius: 5px;
 }
 
-#input:valid{
-    border: solid 1px rgba(67, 216, 74, 0.712);
-}
-
-#input:invalid{
-    border: solid 1px rgba(216, 67, 67, 0.808);
-}
-
-#input-address{
+.input-address{
     width: 30.38em;
     height: 40px;
     font-size: 18px;
@@ -361,15 +357,7 @@ a:hover{
     border-radius: 5px;
 }
 
-#input-address:valid{
-    border: solid 1px rgba(34, 185, 41, 0.712);
-}
-
-#input-address:invalid{
-    border: solid 1px rgba(216, 67, 67, 0.808);
-}
-
-#input-tel{
+.input-tel{
     margin-bottom: 20px;
     height: 40px; 
     font-size: 18px;
@@ -378,15 +366,8 @@ a:hover{
     border-radius: 5px;
 }
 
-#input-tel:valid{
-    border: solid 1px rgba(34, 185, 41, 0.712);
-}
 
-#input-tel:invalid{
-    border: solid 1px rgba(216, 67, 67, 0.808);
-}
-
-#input-mail{
+.input-mail{
     width: 18.7em;
     margin-bottom: 20px;
     height: 40px; 
@@ -396,21 +377,17 @@ a:hover{
     border-radius: 5px; 
 }
 
-#input-mail:valid{
-    border: solid 1px rgba(34, 185, 41, 0.712);
-}
-
-#input-mail:invalid{
-    border: solid 1px rgba(216, 67, 67, 0.808);
-}
-
-#input-commentary{
+.input-commentary{
     width: 30.38em;
     height: 60px;
     font-size: 18px;
     border-top: solid 1px;
     border: none;
     border-radius: 5px;
+}
+
+#validForm{
+    margin-bottom: 20px;
 }
 
 .btn-basket{
@@ -514,7 +491,7 @@ a:hover{
     align-items: center;
 }
 
-#button-back-home{
+.button-back-home{
     font-family: 'Kalam', sans-serif !important;
     margin-right: 50px;
     width: 15em;

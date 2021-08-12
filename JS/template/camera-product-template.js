@@ -13,9 +13,9 @@ function buildCameraProduct(camera){
                                 </select>
                         </div> 
                         <div id="quantity">
-                                <a id="plus"><i class="fas fa-plus-circle"></i></a>
+                                <span id="plus" onclick="addQuantity(event)"><i class="fas fa-plus-circle"></i></span>
                                     <input type="number" id="plusOrMinusClick" value="1" min="1"/>
-                                <a id="minus"><i class="fas fa-minus-circle"></i></a>
+                                <span id="minus" onclick="minusQuantity(event)"><i class="fas fa-minus-circle"></i></span>
                         </div>                                
             </div>
         </div>  
@@ -36,29 +36,19 @@ function buildCameraLensesSelectList (lenses) {
 
 
 //Quantité
-//EventListener boutons quantité
-const quantityClicks = document.getElementById("plusOrMinusClick");
+function addQuantity (event){
+    const quantityClicks = document.getElementById("plusOrMinusClick");
+    quantityClicks.valueAsNumber++;
+}
 
-document
-  .getElementById("plus")
-  .addEventListener("click", function() {
-document
-    .getElementById("plusOrMinusClick")
-    .value = quantityClicks.valueAsNumber +1;
-});
-
-document
-  .getElementById("minus")
-  .addEventListener("click", function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  
-  if (quantityClicks.valueAsNumber == 1){
-    return;
-  }
-
-document
-    .getElementById("plusOrMinusClick")
-    .value = quantityClicks.valueAsNumber -1;
-});
-
+function minusQuantity (event){
+    const quantityClicks = document.getElementById("plusOrMinusClick");
+   
+    
+    if (quantityClicks.valueAsNumber == 1){
+        return;
+    }
+    document
+        .getElementById("plusOrMinusClick")
+        .value = quantityClicks.valueAsNumber -1;
+}
