@@ -1,3 +1,4 @@
+//--------------------------------------------------Structure du produit dans product.html-------------------------------------//
 function buildCameraProduct(camera){
     return `
     <div class="infoProduct">
@@ -22,7 +23,7 @@ function buildCameraProduct(camera){
     </div>`;
 }
 
-//Lenses
+//------------------------------Lenses------------------------------------//
 //Fonction pour le tableau "lenses" dans une balise <select>
 function buildCameraLensesSelectList (lenses) {
     const optionList = document.querySelector("#cameraLenses").options;
@@ -35,7 +36,7 @@ function buildCameraLensesSelectList (lenses) {
 }
 
 
-//Quantité
+//--------------------------------Quantité-------------------------------//
 function addQuantity (event){
     const quantityClicks = document.getElementById("plusOrMinusClick");
     quantityClicks.valueAsNumber++;

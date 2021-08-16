@@ -35,12 +35,10 @@ function hydratePage() {
 
 //sélection du bouton ajouter le produit au panier
 const btn_addCart = document.querySelector("#add_product_to_basket");
-console.log(btn_addCart);
 
 //écouter le bouton et envoyer le panier
 btn_addCart.addEventListener("click", (event) =>{
-  
-    event.preventDefault();
+  event.preventDefault();
 
   let selectLenses = document.getElementById("cameraLenses");
   console.log('Lense selectionné == > ' + selectLenses.value);
@@ -49,7 +47,7 @@ btn_addCart.addEventListener("click", (event) =>{
   console.log(quantity);
 
   //récupérer les données sélectionnées
-  let productAdd = {
+  const productAdd = {
       imageUrl: selectedCamera.imageUrl,
       id: selectedCamera._id,
       name: selectedCamera.name,
@@ -59,25 +57,23 @@ btn_addCart.addEventListener("click", (event) =>{
   }
   console.log(productAdd);
 
-  //envoyer les données sélectionnnées au localStorage
-  let basket = localStorage.getItem('myBasket');
-  if (basket){
-  }else{
+  //envoyer les données sélectionnées au localStorage
+  let basket = JSON.parse(localStorage.getItem('myBasket'));
+  //vérifier si le panier est existe 
+  //si le panier n'existe pas on initialise avec un array vide
+  if (!basket){ 
     basket = [];
   }
 
-  //Chercher si le produit déjà existant dans le localStorage
-  const add2Product = inventaire.find( product => product.id === productToAdd.id);
+  //Vérifier l'existence sélectionné par l'utilisateur dans le localStorage
+  const add2Product = basket.find(product => product.id === productAdd.id);
   if (add2Product){
     add2Product.quantity = add2Product.quantity + productAdd.quantity;
     add2Product.price = add2Product.price + productAdd.price;
+    /*basket.push(add2Product);*/
   }else{
     basket.push(productAdd);
   }
 
-  localStorage.setItem('myBasket', basket);
-
-  //Convertir les données en JSON dans le localStorage en objet JS
-  let productSaveInLocalStorage = JSON.parse(localStorage.getItem ('myBasket'));
-  console.log(productSaveInLocalStorage);
+  localStorage.setItem('myBasket', JSON.stringify(basket));
 });

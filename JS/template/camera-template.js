@@ -1,3 +1,9 @@
+  
+// La fonction buildCamera permet d'afficher une camera dans un card bootstrap
+// Avec cette fonction on affiche les produits sur la page d'affichage de produits (index.html)
+// Lorsqu'on récupère les prouits de l'api
+// On appelle la fonction buildCamera qui prend en paramètre l'objet camera 
+// pour afficher chaque produit sur la page index.html
 function buildCamera(camera){
     return `
     <div class="p-2">

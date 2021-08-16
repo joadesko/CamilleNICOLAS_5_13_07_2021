@@ -1,57 +1,126 @@
 //------------------------------------------------Récupération des produits du localStorage-----------------------------------------------//
-const myBasket = localStorage.getItem('myBasket');
+const productSaveInLocalStorage = JSON.parse(localStorage.getItem('myBasket'));
 
-//-------------------------------------------------------------Structure du panier--------------------------------------------------------//
-const basketDisplay = document.querySelector("#getProductFromLocalStorageToBasket")
+//------------------------------------------------Récupération de la structure du panier------------------------------------------------//
+const basketDisplay = document.getElementById("getProductFromLocalStorageToBasket");
 
-//-------------------------------------------Envoi du formulaire et du panier validé---------------------------------//
+//-------------------------------------------------------Affichage du panier-----------------------------------------------------------//
+if( productSaveInLocalStorage === null){
+  //si panier est vide
+  const emptyBasket =`
+  <div class="empty-basket">
+    <p> Votre panier est vide !</p>
+  </div>
+  `;
+  basketDisplay.innerHTML = emptyBasket;
+} else{
+  //si panier n'est pas vide
+  // Je voudrais afficher l'image, le nom, la quantité et un icone deleted pour enlever le produit du panier
+  let structureProductBasket = [];
+  
+  for(k = 0; k < productSaveInLocalStorage.length; k++ ){
+    structureProductBasket = structureProductBasket + `
+    <div class="full-basket">
+      <div>${productSaveInLocalStorage} <i class="far fa-trash-alt btn-supprimer"></i></div>
+    </div>`;  
+  }
+  if (k ===  productSaveInLocalStorage.length){
+    basketDisplay.innerHTML =  structureProductBasket;
+  }
+}
 
-//Envoie des données saisie dans le formulaire
-localStorage.setItem(document.querySelector("#name").value);
-console.log(document.querySelector("#name").value);
+//----------------------------------------------Bouton icone pour supprimer une camera du panier-------------------------------------------//
 
-//sélection du bouton validation commande
-const btn_valid_order = document.querySelector("#validOrder");
-console.log(btn_valid_order);
+//Sélection de toutes les références des boutons icones supprimer
+let btnSupprimer = document.querySelectorAll(".btn-supprimer")
+console.log(btnSupprimer)
 
-//écouter le bouton et envoyer le panier
-/*btn_valid_order.addEventListener("click", (event) =>{
+//Id du produit qui va être supprimer en cliquant sur le bouton
+for (let l = 0; l < btnSupprimer.length; l++){
+btnSupprimer[l].addEventListener("click" , (event) =>{
+  event.preventDefault();
+
+  let id_selection_suppression = productSaveInLocalStorage[l].selectedCamera._id;
+  console.log("id_selection_suppression");
+  console.log(id_selection_suppression);
+
+  productSaveInLocalStorage = productSaveInLocalStorage.filter( el => el.selectedCamera._id !== id_selection_suppression);
+  console.log(id_selection_suppression)
+
+  localStorage.setItem("mybasket", JSON.stringify(productSaveInLocalStorage));
+  alert("La caméra a été supprimer")
+  window.location.href = "basket.html";
+
+})
+};
+
+
+//-------------------------------------------------------------Calcul du prix total---------------------------------------------------------------//
+let totalPriceCalcul = [];
+
+for (let m = 0; m < productSaveInLocalStorage.length; m++){
+let totalPriceInBasket = productSaveInLocalStorage[m].price;
+
+totalPriceCalcul.push(totalPriceInBasket);
+
+}
+//-----------------------------------------------------Addition des prix si plusieurs produits-------------------------------------------------------//
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const totalPrice = totalPriceCalcul.reduce(reducer,0);
+console.log(totalPrice)
+
+//--------------------------------------------------------------Afficher le prix total---------------------------------------------------------------//
+const totalPriceDisplay = `
+<div class="total-cart-price"> Le prix total est de : ${totalPrice}.00€</div>
+`
+basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay)
+
+
+
+
+//--------------------------------------------------------Récupération des données du formulaire------------------------------------------------------//
+
+
+
+
+
+//-------------------------------------------------------Envoi du formulaire et du panier validé-------------------------------------------------//
+function onSubmit (basket){
+  //Sélection du bouton valider la commande
+  const btn_valid_order = document.getElementById("validOrder")
+  //écouter le bouton 
+  btn_valid_order.addEventListener("click", (event) =>{
+
     event.preventDefault();
 
-    //Sélection des inputs du formulaire
-    let lastName = document.getElementById("lastNameInput").value
-      let firstName = document.getElementById("firstNameInput").value
-      let adress = document.getElementById("adressInput").value
-      let cp = document.getElementById("cpInput").value
-      let city = document.getElementById("cityInput").value
-      let tel = document.getElementById("telInput").value
-      let mail = document.getElementById("mailInput").value
-      let commentary = document.getElementById("commentaryInput").value
+    //Récupération du nom de famille
+    let lastName = document.getElementById("lastName");
+    console.log(lastName.value);
+    //Récupération du prénom
+    let firstName = document.getElementById("firstName");
+    console.log(firstName.value);
+    //Récupération de l'adresse
+    let adress = document.getElementById("adress");
+    console.log(adress.value);
+    //Récupération du code postale
+    let postCode = document.getElementById("postCode");
+    console.log(postCode.value);
+    //Récupération de la ville
+    let city = document.getElementById("city");
+    console.log(city.value);
+    //Récupération du tel
+    let tel = document.getElementById("tel");
+    console.log(tel.value);
+    //Récupération de l'adresse email
+    let email = document.getElementById("email");
+    console.log(email.value);
+    //Récupération des commentaires
+    let commentary = document.getElementById("commentary");
+    console.log(commentary.value);
+
+    basket.push;
     
+});
+}
 
-  //Création d'un tableau des données saisies du formulaire
-  let form = {
-    lastName : 
-    firstName :
-    adress :
-    cp :
-    city :
-    tel :
-    mail :
-    commentary :
-  }
-  console.log(form);
-
-  //envoyer les données sélectionnnées au localStorage
-  let validBasket = localStorage.getItem('myOrder');
-  if (validBasket){
-  }else{
-    validBasket = [];
-  }
-
-  localStorage.setItem('myOrder');
-
-  //Convertir les données en JSON dans le localStorage en objet JS
-  let orderSaveInLocalStorage = JSON.parse(localStorage.getItem ('myOrder'));
-  console.log(orderSaveInLocalStorage);
-});*/
+onSubmit()
