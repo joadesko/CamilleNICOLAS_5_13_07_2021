@@ -34,6 +34,15 @@
     .formTitle{
         text-align: center;
     }
+
+    .btnAddCart{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #add_product_to_basket{
+        margin-bottom: 20px;
+    }
 }
 
 /*Order*/

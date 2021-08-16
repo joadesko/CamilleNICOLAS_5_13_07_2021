@@ -66,6 +66,10 @@
                         <div id="getProductFromLocalStorageToBasket" tabindex="0"></div>
                         <!--Formulaire-->
                         <div id="form" tabindex="0"></div>
+                        <!--Bouton validé la commande-->
+                        <div class="btn-basket" role="button" aria-label="Bouton" tabindex="0">
+                            <button type="submit" id="validOrder" class="button" onclick="onSubmit();">Validé la commande</button>
+                        </div>
                         <!--Paiement-->
                         <div class="payement">
                             <img src="../logo/visa.png" width="70" height="70" class="visa-logo">
@@ -113,8 +117,10 @@
 
                 <!--JS-->
                 <script type="text/javascript"  src="../js/basket.js"></script>
-                <script type="text/javascript"  src="../js/template/form-template.js"></script> 
-                <script type="text/javascript"  src="../js/template/camera-product-basket-template.js"></script> 
+                <script type="text/javascript"  src="../js/template/camera-product-form-basket-template.js"></script>             
+                <script type="text/javascript" src="../js/model/contact.js"></script>
                 <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
+                <script type="text/javascript"  src="../js/model/order.js"></script>
+
         </body>
 </html>
