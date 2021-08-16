@@ -21,7 +21,7 @@ if( productSaveInLocalStorage === null){
   for(k = 0; k < productSaveInLocalStorage.length; k++ ){
     structureProductBasket = structureProductBasket + `
     <div class="full-basket">
-      <div>${productSaveInLocalStorage} <i class="far fa-trash-alt btn-supprimer"></i></div>
+      <div>${productSaveInLocalStorage.imageUrl} ${productSaveInLocalStorage.name} ${productSaveInLocalStorage.price} ${productSaveInLocalStorage.quantity}<i class="far fa-trash-alt btn-supprimer"></i></div>
     </div>`;  
   }
   if (k ===  productSaveInLocalStorage.length){
