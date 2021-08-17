@@ -8,18 +8,18 @@ const form = () => {
         <h4 class="formTitle">Merci de complèter ce formulaire pour valider la commande :</h4>
             <div class="input-form">
                 <div class="name">
-                    <input type="text" id="lastName" name="lastName" class="contact" title="Votre nom de famille" placeholder="Nom" aria-labelledby="Nom" required>
-                    <input type="text" id="firstName" name="firstName" class="contact" title="Votre prénom" placeholder="Prénom" aria-labelledby="Prénom" required>
+                    <input type="text" id="lastName" name="lastName" class="contact" pattern="[A-Z][A-Za-z' -]+" title="Votre nom de famille" placeholder="Nom" aria-labelledby="Nom" required>
+                    <input type="text" id="firstName" name="firstName" class="contact" pattern="[A-Z][A-Za-z' -]+" title="Votre prénom" placeholder="Prénom" aria-labelledby="Prénom" required>
                 </div>
                 <div class="address">
-                    <input type="text" id="adress" name="adress" class="contact-address" title="Votre adresse postale" placeholder="Adresse" aria-labelledby="Adresse" required>
+                    <input type="text" id="adress" name="adress" class="contact-address" pattern="[A-Z][A-Za-z' -]+" title="Votre adresse postale" placeholder="Adresse" aria-labelledby="Adresse" required>
                 </div>
                 <div class="cp">
-                    <input type="text" id="postCode" name="postCode" class="contact"  title="Le code postale" placeholder="Code Postale" aria-labelledby="Code Postale" required>
-                    <input type="text" id="city" name="city" class="contact" title="La ville" placeholder="Ville" aria-labelledby="Ville" required>
+                    <input type="text" id="postCode" name="postCode" class="contact" pattern="[0-9]" title="Le code postale" placeholder="Code Postale" aria-labelledby="Code Postale" required>
+                    <input type="text" id="city" name="city" class="contact" pattern="[A-Z][A-Za-z' -]+" title="La ville" placeholder="Ville" aria-labelledby="Ville" required>
                 </div>
                 <div class="tel-mail">
-                    <input type="tel" id="tel" name="tel" class="contact-tel" inputmode=“numeric” title="Merci de nous communiquer votre numéro de téléphone" placeholder="Téléphone" aria-labelledby="Téléphone" required>
+                    <input type="tel" id="tel" name="tel" class="contact-tel" pattern="[0-9]" title="Merci de nous communiquer votre numéro de téléphone" placeholder="Téléphone" aria-labelledby="Téléphone" required>
                     <input type="email" id="email" name="email" class="contact-mail" title="Merci de nous communiquer votre adresse mail"  placeholder="E-mail" required>
                 </div>
                 <div class="commentary">
