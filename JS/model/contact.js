@@ -11,12 +11,13 @@
 // l'email (email)
 // les commentaires (commentary)
 class Contact{
-    constructor(firstName, lastName, address, city, postCode, email, commentary) {
+    constructor(firstName, lastName, address, city, postCode, tel, email, commentary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.postCode = postCode;
         this.city = city;
+        this.tel = tel;
         this.email = email;
         this.commentary = commentary;
     }

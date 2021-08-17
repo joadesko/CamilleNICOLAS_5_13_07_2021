@@ -319,6 +319,9 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 2px rgb(218, 151, 50);
+    box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin: 10px;
 }
 
 .total-cart-price{
@@ -328,6 +331,8 @@ a:hover{
     font-weight: bold;
     text-decoration: underline;
     color: rgb(218, 151, 50);
+    text-shadow: 0.03em 0.03em 0.05em black;
+    margin: 30px;
 }
 
 /*Formulaire*/
@@ -353,14 +358,8 @@ a:hover{
     font-family: 'Kalam', sans-serif !important;
 }
 
-.input-form{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px;
-}
 
-.input{
+.contact{
     width: 15em;
     height: 40px;
     font-size: 18px;
@@ -369,7 +368,7 @@ a:hover{
     border-radius: 5px;
 }
 
-.input-address{
+.contact-address{
     width: 30.38em;
     height: 40px;
     font-size: 18px;
@@ -379,7 +378,7 @@ a:hover{
     border-radius: 5px;
 }
 
-.input-tel{
+.contact-tel{
     margin-bottom: 20px;
     height: 40px; 
     font-size: 18px;
@@ -389,7 +388,7 @@ a:hover{
 }
 
 
-.input-mail{
+.contact-mail{
     width: 18.7em;
     margin-bottom: 20px;
     height: 40px; 
@@ -399,7 +398,7 @@ a:hover{
     border-radius: 5px; 
 }
 
-.input-commentary{
+.commentary{
     width: 30.38em;
     height: 60px;
     font-size: 18px;
@@ -408,14 +407,20 @@ a:hover{
     border-radius: 5px;
 }
 
-#validForm{
-    margin-bottom: 20px;
+
+input:invalid {
+    border: 1px dashed rgb(240, 76, 76);
+  }
+  
+input:valid {
+border: 1px solid rgb(53, 179, 70);
 }
 
 .btn-basket{
     display: flex;
     justify-content: center;
     font-family: 'Kalam', sans-serif !important;
+    margin: 30px;
 }
 
 .payement{
