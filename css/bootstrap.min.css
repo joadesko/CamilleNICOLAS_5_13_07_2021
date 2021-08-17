@@ -328,6 +328,7 @@ a:hover{
     font-weight: bold;
     text-decoration: underline;
     color: rgb(218, 151, 50);
+    margin: 30px;
 }
 
 /*Formulaire*/
@@ -353,14 +354,8 @@ a:hover{
     font-family: 'Kalam', sans-serif !important;
 }
 
-.input-form{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px;
-}
 
-.input{
+.contact{
     width: 15em;
     height: 40px;
     font-size: 18px;
@@ -369,7 +364,7 @@ a:hover{
     border-radius: 5px;
 }
 
-.input-address{
+.contact-address{
     width: 30.38em;
     height: 40px;
     font-size: 18px;
@@ -379,7 +374,7 @@ a:hover{
     border-radius: 5px;
 }
 
-.input-tel{
+.contact-tel{
     margin-bottom: 20px;
     height: 40px; 
     font-size: 18px;
@@ -389,7 +384,7 @@ a:hover{
 }
 
 
-.input-mail{
+.contact-mail{
     width: 18.7em;
     margin-bottom: 20px;
     height: 40px; 
@@ -399,7 +394,7 @@ a:hover{
     border-radius: 5px; 
 }
 
-.input-commentary{
+.commentary{
     width: 30.38em;
     height: 60px;
     font-size: 18px;

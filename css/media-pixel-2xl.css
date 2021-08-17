@@ -18,14 +18,6 @@
 /*Panier*/
 @media (max-width: 586px){
 
-    .input-form{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .name{
         display: flex;
         flex-direction: column;
@@ -41,24 +33,29 @@
         flex-direction: column;
     }
 
-    #input{
+    .contact{
         width: 20em !important;
     }
 
-    #input-address{
+    .contact-address{
         width: 20em !important;
     }
 
-    #input-tel{
+    .contact-tel{
         width: 20em !important;
     }
 
-    #input-mail{
+    .contact-mail{
         width: 20em !important ;
     }
     
-    #input-commentary{
+    .commentary{
         width: 20em !important;
+    }
+
+    .btn-basket{
+        margin-top: 40px;
+        margin-bottom: 20px;
     }
 
 }

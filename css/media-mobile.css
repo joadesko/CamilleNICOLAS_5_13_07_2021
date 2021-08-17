@@ -16,23 +16,23 @@
 /*Panier*/
 @media (max-width: 410px){
 
-    #input{
+    .contact{
         width: 18em !important;
     }
 
-    #input-address{
+    .contact-address{
         width: 18em !important;
     }
 
-    #input-tel{
+    .contact-tel{
         width: 18em !important;
     }
 
-    #input-mail{
+    .contact-mail{
         width: 18em !important ;
     }
     
-    #input-commentary{
+    .commentary{
         width: 18em !important;
     }
 
