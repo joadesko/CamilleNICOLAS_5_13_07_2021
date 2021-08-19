@@ -8,7 +8,7 @@ basketRecovery.forEach((item) => {
     for(k = 0; k < basketRecovery.length; k++ ){
       structureProductBasket = structureProductBasket + ` 
       <div id="full-basket">
-        <div><img class="img-basket-recovery" src=${basketRecovery[k].imageUrl}/></div>
+      <img  class="img-basket" src="${basketRecovery[k].imageUrl}" alt="Card image">
         <div><p class="info-basket">${basketRecovery[k].name}</p></div>
         <div><p class="info-basket">${basketRecovery[k].price}.00€</p></div> 
         <div><p class="info-basket">x${basketRecovery[k].quantity}</p></div>
@@ -22,7 +22,6 @@ basketRecovery.forEach((item) => {
 
 //Suppression d'un produit
 let btnSupprimer = document.querySelectorAll("#btnDeleted");
-console.log(btnSupprimer)
 
 for (let l = 0; l < btnSupprimer.length; l++){
   //le clic
@@ -42,13 +41,13 @@ for (let l = 0; l < btnSupprimer.length; l++){
           console.log(priceToRemove);
           let newPrice = totalPrice - basketRecovery[l].price;
           console.log(newPrice);
-          /*let replacePrice = totalPrice.replace(totalPrice, newPrice)
-          console.log(replacePrice)*/
           return true;
         }
+
       });
       console.log(productDeleted);
       localStorage.setItem("myBasket", JSON.stringify(productDeleted));
+      window.location.reload();
     }
   })
 }
@@ -68,7 +67,7 @@ const totalPrice = totalPriceCalcul.reduce(reducer,0);
 console.log(totalPrice);
 
 //Afficher le prix total
-const basketDisplay = document.getElementById("getProductFromLocalStorageToBasket");
+const basketDisplay = document.getElementById("divTotalPrice");
 const totalPriceDisplay = `
 <div id="total-price" class="total-cart-price"> Le prix total de vos achats est de : ${totalPrice}.00€</div>
 `

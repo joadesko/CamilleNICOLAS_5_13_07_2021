@@ -45,6 +45,18 @@
     }
 }
 
+@media (max-width: 715px){
+    
+    #full-basket{
+        flex-direction: column !important;
+        margin: 10px;
+    }
+    
+    #getProductFromLocalStorageToBasket{
+        flex-wrap: wrap !important;
+    } 
+}
+
 /*Order*/
 @media (max-width: 651px){
     .buttonOrder{
@@ -63,5 +75,3 @@
         display: block;
     }
 }
-
-

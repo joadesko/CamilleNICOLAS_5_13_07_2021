@@ -36,7 +36,7 @@
                         
                         <!--Menu déroulant-->
                         <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
+                            <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="../index.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
                                 <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
@@ -63,7 +63,9 @@
                 <main class="l-main l-center" role="main" aria-label="Contenu principale">
                     <section class="jumbotron">
                         <!--Panier final-->
+                        <h1 class="recap-basket-title">Récapitulatif de votre panier :</h1>
                         <div id="getProductFromLocalStorageToBasket" tabindex="0"></div>
+                        <div id="divTotalPrice"></div>
                         <!--Formulaire-->
                         <div id="form" tabindex="0"></div>
                         <!--Paiement-->
@@ -117,6 +119,7 @@
                 <script type="text/javascript" src="../js/model/contact.js"></script>
                 <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
                 <script type="text/javascript"  src="../js/model/order.js"></script>
+                
 
         </body>
 </html>
