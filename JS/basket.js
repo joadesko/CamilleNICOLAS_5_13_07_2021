@@ -7,8 +7,8 @@ basketRecovery.forEach((item) => {
 
     for(k = 0; k < basketRecovery.length; k++ ){
       structureProductBasket = structureProductBasket + ` 
-      <div class="full-basket">
-        <div><img src=${basketRecovery[k].imageUrl.scr}/></div>
+      <div id="full-basket">
+        <div><img class="img-basket-recovery" src=${basketRecovery[k].imageUrl}/></div>
         <div><p class="info-basket">${basketRecovery[k].name}</p></div>
         <div><p class="info-basket">${basketRecovery[k].price}.00€</p></div> 
         <div><p class="info-basket">x${basketRecovery[k].quantity}</p></div>
@@ -20,25 +20,47 @@ basketRecovery.forEach((item) => {
     }
 });
 
-//Suppression d'un article
-let btnSupprimer = document.getElementById("btnDeleted")
+//Suppression d'un produit
+let btnSupprimer = document.querySelectorAll("#btnDeleted");
 console.log(btnSupprimer)
 
-btnSupprimer.addEventListener("click", function(e) {
-  e.preventDefault();
-  localStorage.setItem(JSON.stringify(basketRecovery, 'myBasket'));
-})
+for (let l = 0; l < btnSupprimer.length; l++){
+  //le clic
+  btnSupprimer[l].addEventListener("click", (event) => {
+    event.preventDefault();
+    //Supression dans le localeStorage
+    let idDeleted = basketRecovery[l].id;
+    console.log(idDeleted)
 
+    const productInBasket = JSON.parse(localStorage.getItem('myBasket'));
+    if (productInBasket != null && productInBasket.length > 0){
+      let productDeleted = productInBasket.filter(camera => {
+      let isFind = camera.id !== idDeleted;
+        if(isFind){
+          //Traiter le prix
+          let priceToRemove = basketRecovery[l].price;
+          console.log(priceToRemove);
+          let newPrice = totalPrice - basketRecovery[l].price;
+          console.log(newPrice);
+          /*let replacePrice = totalPrice.replace(totalPrice, newPrice)
+          console.log(replacePrice)*/
+          return true;
+        }
+      });
+      console.log(productDeleted);
+      localStorage.setItem("myBasket", JSON.stringify(productDeleted));
+    }
+  })
+}
 
 
 //-------------------------------------------------------------Calcul du prix total---------------------------------------------------------------//
 let totalPriceCalcul = [];
 
 for (let m = 0; m < basketRecovery.length; m++){
-let totalPriceInBasket = basketRecovery[m].price;
+  let totalPriceInBasket = basketRecovery[m].price;
 
-totalPriceCalcul.push(totalPriceInBasket);
-
+  totalPriceCalcul.push(totalPriceInBasket);
 }
 //Addition des prix si plusieurs produits
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
@@ -48,7 +70,7 @@ console.log(totalPrice);
 //Afficher le prix total
 const basketDisplay = document.getElementById("getProductFromLocalStorageToBasket");
 const totalPriceDisplay = `
-<div class="total-cart-price"> Le prix total de vos achats est de : ${totalPrice}.00€</div>
+<div id="total-price" class="total-cart-price"> Le prix total de vos achats est de : ${totalPrice}.00€</div>
 `
 basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay);
 
@@ -57,12 +79,13 @@ basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay);
 
 //----------------------------------------------------------Envoie du panier et du formulaire--------------------------------------------------------//
 //Fonction pour obtenir un Id de commande
-function getOrderConfId(responseId) {
+function getOrderId(responseId) {
   let orderId = responseId.orderId;
   console.log(orderId);
-  localStorage.setItem("orderConfId", orderId);
+  localStorage.setItem("orderId", orderId);
 }
 
+getOrderId();
 //Fonction pour gérer la soumission du formulaire
 async function handleSubmit(event) {
   //Récupération des données saisie dans le formulaire
@@ -88,6 +111,7 @@ async function handleSubmit(event) {
         method: "POST",
         body : JSON.stringify(order),
         headers: {
+          "Accept": "Application/json",
           "Content-Type" : "application/json",
         }
       }
@@ -98,7 +122,7 @@ async function handleSubmit(event) {
       if (response.ok) {
         let responseId = await response.json()
         getOrderConfId(responseId);
-        window.location = 'confirmation.html'
+        window.location.href='./confirmation.html/orderId=' + response.orderId;
       } else{
       console.error(error, response.status);
       }
