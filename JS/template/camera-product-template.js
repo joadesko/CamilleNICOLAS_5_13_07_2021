@@ -3,7 +3,7 @@ function buildCameraProduct(camera){
     return `
     <div class="infoProduct">
         <div class="product">
-            <img id="cardImgProduct" src="${camera.imageUrl}" alt="Card image cap">
+            <img id="cardImgProduct" src="${camera.imageUrl}" alt="Card image">
             <div class="cardBodyProduct">
                 <h5 id="cardTitleProduct">${camera.name}</h5>
                     <p id="cardDescriptionProduct">${camera.description}</p>
