@@ -20,6 +20,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 150px;
     background-color: rgba(243,233,241,255);
 }
@@ -55,7 +56,7 @@ a:hover{
 }
 
 
-/* Change navbar styling on scroll */
+/**Navbar**/
 .navbar.active {
     background: #fff;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
@@ -118,6 +119,24 @@ a:hover{
 
 .show {
     display:block;
+}
+
+/*Index*/
+.carousel-item {
+    width: 300px;
+    height: 69.4vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    margin: 0;
+}
+
+.gallery-title{
+    color: rgb(218, 151, 50);
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-weight: bold;
+    font-family: 'Kalam', sans-serif !important; 
 }
 
 /*Card*/
