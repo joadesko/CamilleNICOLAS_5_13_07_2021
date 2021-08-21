@@ -29,126 +29,132 @@
         
         <title>Bienvenue chez Orinoco</title>
     </head>
-<body> 
-    <!--Header-->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg py-3">
-            <div class="container">
-                <a href="pages/products-list.html">
-                    <img src="logo/logo.JPG" class="img-header" alt="Site du logo">
-                </a>
-                
-                <!--Menu déroulant pour la responsive design-->
-                <div class="dropdown">
-                    <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="pages/products-list.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
-                        <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
-                        <a href="#" class="e font-weight-bold" style="color: rgb(218, 151, 50);">Mon compte</a>
-                        <a href="pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
-                        <a href="pages/basket.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Mon panier</a></li>
-                    </div>
-                </div>
+        <body> 
+            <!--Header-->
+            <header class="header">
+                <nav class="navbar navbar-expand-lg py-3">
+                    <div class="container">
+                        <a href="pages/products-list.html">
+                            <img src="logo/logo.JPG" class="img-header" alt="Site du logo">
+                        </a>
+                        
+                        <!--Menu déroulant pour la responsive design-->
+                        <div class="dropdown">
+                            <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="pages/products-list.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
+                                <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
+                                <a href="#" class="e font-weight-bold" style="color: rgb(218, 151, 50);">Mon compte</a>
+                                <a href="pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
+                                <a href="pages/basket.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Mon panier</a></li>
+                            </div>
+                        </div>
 
-                <!--Menu de navigation-->
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="pages/products-list.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Notifications</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Compte</a></li>
-                        <li class="nav-item"><a href="pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
-                        <li class="nav-item"><a href="pages/basket.html" class="nav-link text-uppercase font-weight-bold">Panier</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-        <!--Main-->
-        <main>
-            <section id="gallery-image" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" style="background-image: url('http://localhost:3000/images/vcam_1.jpg')">
-                    <img src>
-                    <div class="carousel-caption">
-                      <h5 class="gallery-title">Zurss 50S</h5>
+                        <!--Menu de navigation-->
+                        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="pages/products-list.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Notifications</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Compte</a></li>
+                                <li class="nav-item"><a href="pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
+                                <li class="nav-item"><a href="pages/basket.html" class="nav-link text-uppercase font-weight-bold">Panier</a></li>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_2.jpg')">
-                    <div class="carousel-caption">
-                      <h5 class="gallery-title">Hirsch 400DTS</h5>
-                    </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_3.jpg')">
-                    <div class="carousel-caption">
-                      <h5 class="gallery-title">Franck JS 105</h5>
-                    </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_4.jpg')">
-                    <div class="carousel-caption">
-                      <h5 class="gallery-title">Kuros TTS</h5>
-                    </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_5.jpg')">
-                    <div class="carousel-caption">
-                      <h5 class="gallery-title">Katatone</h5>
-                    </div>
-                  </div>
-                </div>
-                <!-- Controls -->
-                <a class="carousel-control-prev" href="#gallery-image" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#gallery-image" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </section>
-              
-        </main>
+                </nav>
+            </header>
 
+                <!--Main-->
+                <main>
+                    <section id="gallery-image" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <a href="pages/products-list.html">
+                                <div class="carousel-item active" style="background-image: url('http://localhost:3000/images/vcam_1.jpg')">
+                                    <img src>
+                                    <div class="carousel-caption">
+                                    <h5 class="gallery-title">Zurss 50S</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="pages/products-list.html">
+                                <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_2.jpg')">
+                                    <div class="carousel-caption">
+                                    <h5 class="gallery-title">Hirsch 400DTS</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="pages/products-list.html">
+                                <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_3.jpg')">
+                                    <div class="carousel-caption">
+                                    <h5 class="gallery-title">Franck JS 105</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="pages/products-list.html">
+                                <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_4.jpg')">
+                                    <div class="carousel-caption">
+                                    <h5 class="gallery-title">Kuros TTS</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="pages/products-list.html">
+                                <div class="carousel-item" style="background-image: url('http://localhost:3000/images/vcam_5.jpg')">
+                                    <div class="carousel-caption">
+                                    <h5 class="gallery-title">Katatone</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--Icone slide-->
+                        <a class="carousel-control-prev" href="#gallery-image" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>          
+                        </a>
+                        <a class="carousel-control-next" href="#gallery-image" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </section>           
+                </main>
 
-            <!-- Footer -->
-            <footer class="text-center text-white" style="background-color: #f1f1f1;">
-                <div class="container-footer">
-                    <section class="rs">
-                        <!--Facebook-->
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button"data-mdb-ripple-color="dark" title="Venez visiter notre page Facebook !"><i class="fab fa-facebook-f"></i></a>
-                
-                        <!--Twitter-->
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre page Twiiter !"><i class="fab fa-twitter"></i></a>
-                
-                        <!--Instagram-->
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre compte Instagram !"><i class="fab fa-instagram"></i></a>
-                
-                        <!--Github-->
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Cam1793/CamilleNICOLAS_5_13_07_2021" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
-                    </section>
-                </div>
+                    <!-- Footer -->
+                    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+                        <div class="container-footer">
+                            <section class="rs">
+                                <!--Facebook-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button"data-mdb-ripple-color="dark" title="Venez visiter notre page Facebook !"><i class="fab fa-facebook-f"></i></a>
+                        
+                                <!--Twitter-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre page Twiiter !"><i class="fab fa-twitter"></i></a>
+                        
+                                <!--Instagram-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre compte Instagram !"><i class="fab fa-instagram"></i></a>
+                        
+                                <!--Github-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Cam1793/CamilleNICOLAS_5_13_07_2021" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                            </section>
+                        </div>
 
-                <!-- Informations du site -->
-                <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                    <ul class="footer-list list-unstyled">
-                        <li class="nave-item-active">
-                            <a href="#" class="nav-link-footer font-weight-bold";>Catalogue</a>
-                        </li>
-                        <li class="nave-item">
-                            <a href="#" class="nav-link-footer font-weight-bold">Conditions d'utlisation</a>
-                        </li>
-                        <li class="nave-item">
-                            <a href="#" class="nav-link-footer font-weight-bold">À propos du site</a>
-                        </li>
-                        <li class="nave-item">
-                            <a href="mailto:camille.nicolas93@gmail.com" class="nav-link-footer font-weight-bold">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+                        <!-- Informations du site -->
+                        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                            <ul class="footer-list list-unstyled">
+                                <li class="nave-item-active">
+                                    <a href="#" class="nav-link-footer font-weight-bold";>Catalogue</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="#" class="nav-link-footer font-weight-bold">Conditions d'utlisation</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="#" class="nav-link-footer font-weight-bold">À propos du site</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="mailto:camille.nicolas93@gmail.com" class="nav-link-footer font-weight-bold">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
 
-        <!--JS-->    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-</body>
+                <!--JS-->    
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        </body>
 </html>
