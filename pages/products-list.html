@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Responsive Design-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/media-laptop.css">
-        <link rel="stylesheet" href="../css/media-tablet.css">
-        <link rel="stylesheet" href="../css/media-pixel-2xl.css">
-        <link rel="stylesheet" href="../css/media-mobile.css">
+        <link rel="stylesheet" href="css/media-laptop.css">
+        <link rel="stylesheet" href="css/media-tablet.css">
+        <link rel="stylesheet" href="css/media-pixel-2xl.css">
+        <link rel="stylesheet" href="css/media-mobile.css">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!--Css-->
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        
         <!--FontAwesome Icone-->
         <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
+
+        <!--Police-->
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
         <!--Icone onglet-->
         <link rel="shortcut icon" href="../logo/icone_onglet.png">
         
-        <title>Votre panier</title>
+        <title>Orinoco en ligne</title>
     </head>
         <body>
             <!--Header-->
@@ -34,7 +37,7 @@
                             <img src="../logo/logo.JPG" class="img-header" alt="Site du logo">
                         </a>
                         
-                        <!--Menu déroulant-->
+                        <!--Menu déroulant pour la responsive design-->
                         <div class="dropdown">
                             <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
                             <div id="myDropdown" class="dropdown-content">
@@ -60,21 +63,11 @@
                 </nav>
             </header>
                 <!--Main-->
-                <main class="l-main l-center" role="main" aria-label="Contenu principale">
-                    <section class="jumbotron">
-                        <!--Panier final-->
-                        <h1 class="recap-basket-title">Récapitulatif de votre panier :</h1>
-                        <div id="getProductFromLocalStorageToBasket" tabindex="0"></div>
-                        <div id="divTotalPrice"></div>
-                        <!--Formulaire-->
-                        <div id="form" tabindex="0"></div>
-                        <!--Paiement-->
-                        <div class="payement">
-                            <img src="../logo/visa.png" width="70" height="70" class="visa-logo">
-                            <img src="../logo/mc.png" width="60" height="40">
-                            <img src="../logo/pp.png" width="70" height="70">
-                        </div>          
-                    </section>
+                <main id="products-container" class="l-main l-center jumbotron" role="main" aria-label="Contenu principale">
+                    <h1 class="title">Caméras Vintages</h1>
+                    <h2 class="intro">Nos appareils photos en vente :</h2>
+                        <!--Template-->
+                        <div id="productsList" class="d-flex flex-row"></div>
                 </main>
                     <!-- Footer -->
                     <footer class="text-center text-white" style="background-color: #f1f1f1;">
@@ -113,13 +106,10 @@
                         </div>
                     </footer>
 
-                <!--JS-->
-                <script type="text/javascript"  src="../js/basket.js"></script>
-                <script type="text/javascript"  src="../js/template/camera-form-basket-template.js"></script>             
-                <script type="text/javascript" src="../js/model/contact.js"></script>
-                <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
-                <script type="text/javascript"  src="../js/model/order.js"></script>
-                
-
+            <!--JS-->
+            <script type="text/javascript" src="../js/model/nav-toggle.js"></script> 
+            <script type="text/javascript" src="../js/model/camera.js"></script> 
+            <script type="text/javascript" src="../js/template/camera-template.js"></script>
+            <script type="text/javascript" src="../js/orinoco.js"></script>
         </body>
 </html>

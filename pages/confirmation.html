@@ -31,7 +31,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-lg py-3">
                 <div class="container">
-                    <a href="../index.html">
+                    <a href="../pages/products-list.html">
                         <img src="../logo/logo.JPG" class="img-header" alt="Site du logo">
                     </a>
                     
@@ -39,7 +39,7 @@
                     <div class="dropdown">
                         <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="../index.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
+                            <a href="../pages/products-list.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
                             <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
                             <a href="#" class="e font-weight-bold" style="color: rgb(218, 151, 50);">Mon compte</a>
                             <a href="../pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
@@ -50,7 +50,7 @@
                     <!--Menu de navigation-->
                     <div id="navbarSupportedContent" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a href="../index.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item active"><a href="../pages/products-list.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
                             <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Notifications</a></li>
                             <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Compte</a></li>
                             <li class="nav-item"><a href="../pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
@@ -70,12 +70,13 @@
                         <div class="thanksTitle">
                             <h3 class="valideTitle" tabindex="0">Validé !</h3>
                             <h4 class="valideIntro" tabindex="0">Merci d'avoir passé commande !<span class="return-lign"> Elle est en cours de préparation.</span> <br>Nous vous contacterons dès son envoie !</h4>
-                            <p class="pIdOrder" tabindex="0">Numéros de votre commande :<strong></strong></p>
+                            <div id="divTotalPrice"></div>
+                            <div id="order-id-display"></div>
                         </div>
                         <!--Bouton-->
                         <div class="buttonOrder" role="button" aria-label="Bouton">
-                            <button class="button-back-home" onclick="window.location.href = '../index.html';" tabindex="0">Retour à la page d'accueil</button>
-                            <button class="button" onclick="window.location.href = '#';" tabindex="0">Autres commandes</button>
+                            <button class="button-back-home" onclick="window.location.href = 'index.html';" tabindex="0">Retour à la page d'accueil</button>
+                            <button class="button" onclick="window.location.href = '/pages/product-list.html';" tabindex="0">Autres produits</button>
                         </div>
                     </div>
                 </section>
@@ -119,5 +120,7 @@
                 
                 <!--JS-->
                 <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
+                <script type="text/javascript" src="../js/basket.js"></script>
+                <script type="text/javascript" src="../js/confirmation.js"></script>
     </body>
 </html>
