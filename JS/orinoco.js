@@ -10,7 +10,6 @@ async function loadCameras() {
   return await response.json();
 };
 
-
 // Fonction exécuter au chargement de la page
 (async function onPageload() {
   try {
