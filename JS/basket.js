@@ -21,7 +21,7 @@ basketRecovery.forEach((item) => {
 });
 
 //Suppression d'un produit
-let btnSupprimer = document.querySelectorAll("#btnDeleted");
+/*let btnSupprimer = document.querySelectorAll("#btnDeleted");
 
 for (let l = 0; l < btnSupprimer.length; l++){
   //le clic
@@ -50,11 +50,11 @@ for (let l = 0; l < btnSupprimer.length; l++){
       window.location.reload();
     }
   })
-}
+}*/
 
 
 //-------------------------------------------------------------Calcul du prix total---------------------------------------------------------------//
-let totalPriceCalcul = [];
+/*let totalPriceCalcul = [];
 
 for (let m = 0; m < basketRecovery.length; m++){
   let totalPriceInBasket = basketRecovery[m].price;
@@ -71,7 +71,7 @@ const basketDisplay = document.getElementById("divTotalPrice");
 const totalPriceDisplay = `
 <div id="total-price" class="total-cart-price"> Le prix total de vos achats est de : ${totalPrice}.00€</div>
 `
-basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay);
+basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay);*/
 
 
 
@@ -84,9 +84,9 @@ function getOrderId(responseId) {
   localStorage.setItem("orderId", orderId);
 }
 
-getOrderId();
+//getOrderId();
 //Fonction pour gérer la soumission du formulaire
-async function handleSubmit(event) {
+ function handleSubmit(event) {
   //Récupération des données saisie dans le formulaire
   event.preventDefault();
   const data = new FormData(event.target);
@@ -106,7 +106,7 @@ async function handleSubmit(event) {
       //créer la commande avec le contact et le panier
       const order = new Order (contact, basketRecovery);
       //Après faire un POST en passant la variable order
-      const sendOrder = {
+      /*const sendOrder = {
         method: "POST",
         body : JSON.stringify(order),
         headers: {
@@ -132,5 +132,6 @@ async function handleSubmit(event) {
         console.log("Merci de choisir un produit avant d'accèder à votre panier !");
         event.preventDefault();
       }, false);
-    }
+    }*/
+  }
   }

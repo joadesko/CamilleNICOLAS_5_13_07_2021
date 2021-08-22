@@ -4,7 +4,7 @@ const form = () => {
     const positionForm = document.querySelector("#form");
 
     const structureFormulaire = `
-    <form name="orderForm" class="form-order" method="POST onsubmit="handleSubmit(event)" role="search" aria-label="Formulaire">
+    <form name="orderForm" class="form-order" onsubmit="handleSubmit(event)" role="search" aria-label="Formulaire" id="orderForm">
         <h4 class="formTitle">Merci de complèter ce formulaire pour valider la commande :</h4>
             <div class="input-form">
                 <div class="name">
@@ -28,7 +28,7 @@ const form = () => {
             </div>
             <!--Bouton validé la commande-->
             <div class="btn-basket" role="button" aria-label="Bouton" tabindex="0">
-                <button type="submit" id="validOrder" class="button" onclick="handleSubmit(event)">Validé la commande</button>
+                <button type="submit" id="validOrder" class="button">Validé la commande</button>
             </div>
     </form>
     `;
