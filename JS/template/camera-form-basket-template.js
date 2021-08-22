@@ -1,7 +1,7 @@
 //------------------------------------------------Structure du formulaire------------------------------------//
 const form = () => {
 
-    const positionForm = document.querySelector("#form");
+    const positionForm = document.getElementById("form");
 
     const structureFormulaire = `
     <form name="orderForm" class="form-order" onsubmit="handleSubmit(event)" role="search" aria-label="Formulaire" id="orderForm">
