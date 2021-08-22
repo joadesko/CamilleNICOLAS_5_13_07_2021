@@ -32,12 +32,7 @@ function hydratePage() {
 }
 
 //--------------------------------------------Ajout de la caméra au panier------------------------------------------------//
-
-//sélection du bouton ajouter le produit au panier
-const btn_addCart = document.querySelector("#add_product_to_basket");
-
-//écouter le bouton et envoyer le panier
-btn_addCart.addEventListener("click", (event) =>{
+function addProductToLocalStorage (event){
   event.preventDefault();
 
   let selectLenses = document.getElementById("cameraLenses");
@@ -76,4 +71,13 @@ btn_addCart.addEventListener("click", (event) =>{
   }
 
   localStorage.setItem('myBasket', JSON.stringify(basket));
-});
+}
+
+//sélection du bouton ajouter le produit au panier
+//const btn_addCart = document.querySelector("#add_product_to_basket");
+
+//écouter le bouton et envoyer le panier
+/*btn_addCart.addEventListener("click", (event) =>{
+  event.preventDefault();
+
+});*/

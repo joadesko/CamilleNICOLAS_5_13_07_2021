@@ -47,7 +47,7 @@
 
 @media (max-width: 715px){
     
-    #full-basket{
+    .full-basket{
         flex-direction: column !important;
         margin: 10px;
     }

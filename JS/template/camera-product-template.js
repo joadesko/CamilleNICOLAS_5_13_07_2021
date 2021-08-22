@@ -38,13 +38,14 @@ function buildCameraLensesSelectList (lenses) {
 
 //--------------------------------Quantité-------------------------------//
 function addQuantity (event){
+    event.preventDefault();
     const quantityClicks = document.getElementById("plusOrMinusClick");
     quantityClicks.valueAsNumber++;
 }
 
 function minusQuantity (event){
+    event.preventDefault();
     const quantityClicks = document.getElementById("plusOrMinusClick");
-   
     
     if (quantityClicks.valueAsNumber == 1){
         return;
