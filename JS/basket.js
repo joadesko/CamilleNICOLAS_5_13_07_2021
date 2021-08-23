@@ -1,10 +1,12 @@
 //Récuperation du panier
 const basketRecovery = JSON.parse(localStorage.getItem('myBasket'));
 // Contenu pour le prix
-//const divTotalPrice = document.getElementById("divTotalPrice");
+const divTotalPrice2 = document.getElementById("divTotalPrice");
 // On récupère la section où afficher le panier
 const basketDisplay = document.getElementById("getProductFromLocalStorageToBasket");
-let structureProductBasket;
+// on initiliase le structureProductBasket à vide.
+
+let structureProductBasket='';
 let totalPrice=0;
 basketRecovery.forEach(item => {
   totalPrice+=Number(item.price);
@@ -25,7 +27,7 @@ const totalPriceDisplay = `
 // on insère les produits récupérés du localstorage
 if(structureProductBasket) {
   basketDisplay.innerHTML =  structureProductBasket;
-  basketDisplay.insertAdjacentHTML("beforeend", totalPriceDisplay);
+  divTotalPrice2.innerHTML = totalPriceDisplay;
 
 }
 
